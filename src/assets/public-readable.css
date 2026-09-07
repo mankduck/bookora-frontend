@@ -1,0 +1,228 @@
+/*
+|--------------------------------------------------------------------------
+| Public readable typography
+|--------------------------------------------------------------------------
+|
+| Lớp override này chỉ tăng khả năng đọc cho khu vực khách hàng/public.
+| Không ảnh hưởng Admin vì các selector đều nhắm vào public/account/booking.
+|
+*/
+
+/* Header */
+.public-shell .brand strong {
+  font-size: 18px !important;
+}
+
+.public-shell .nav-link,
+.public-shell .login-link,
+.public-shell .booking-link,
+.public-shell .account-name {
+  font-size: 14px !important;
+}
+
+.public-shell .dropdown-user strong {
+  font-size: 14px !important;
+}
+
+.public-shell .dropdown-user span,
+.public-shell .dropdown-link {
+  font-size: 13px !important;
+}
+
+/* Booking page */
+.booking-page .back-link {
+  font-size: 13px !important;
+}
+
+.booking-page .eyebrow {
+  font-size: 12px !important;
+}
+
+.booking-page .booking-heading h1 {
+  font-size: 42px !important;
+  line-height: 1.12 !important;
+}
+
+.booking-page .booking-heading p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.booking-page .progress-item strong {
+  font-size: 13px !important;
+}
+
+.booking-page .progress-item span {
+  font-size: 11px !important;
+}
+
+.booking-page .section-title h2 {
+  font-size: 18px !important;
+}
+
+.booking-page .section-title p {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.booking-page .service-option strong,
+.booking-page .option-content strong {
+  font-size: 15px !important;
+}
+
+.booking-page .service-option span,
+.booking-page .option-content > span {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.booking-page label,
+.booking-page .form-field label {
+  font-size: 13px !important;
+}
+
+.booking-page input,
+.booking-page textarea,
+.booking-page select {
+  font-size: 14px !important;
+}
+
+.booking-page button {
+  font-size: 13px !important;
+}
+
+.booking-page .summary-card span,
+.booking-page .summary-card p,
+.booking-page .summary-note,
+.booking-page .confirm-grid span,
+.booking-page .confirm-note span {
+  font-size: 12px !important;
+}
+
+.booking-page .summary-card strong,
+.booking-page .confirm-grid strong {
+  font-size: 14px !important;
+}
+
+.booking-page .total-row strong {
+  font-size: 18px !important;
+}
+
+/* Account pages */
+.account-page .eyebrow {
+  font-size: 12px !important;
+}
+
+.account-page .page-heading h1,
+.account-page .detail-heading h1 {
+  font-size: 36px !important;
+  line-height: 1.15 !important;
+}
+
+.account-page .page-heading p,
+.account-page .detail-heading p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+.account-page .primary-link,
+.account-page .back-link {
+  font-size: 13px !important;
+}
+
+.account-page .tabs button {
+  font-size: 13px !important;
+}
+
+.account-page .booking-code {
+  font-size: 11px !important;
+}
+
+.account-page .booking-topline h3 {
+  font-size: 17px !important;
+}
+
+.account-page .booking-topline p {
+  font-size: 13px !important;
+}
+
+.account-page .booking-meta {
+  font-size: 12px !important;
+}
+
+.account-page .booking-meta strong {
+  font-size: 14px !important;
+}
+
+.account-page .status-badge {
+  font-size: 11px !important;
+}
+
+.account-page .state,
+.account-page .empty-card {
+  font-size: 14px !important;
+}
+
+.account-page .empty-card p {
+  font-size: 13px !important;
+}
+
+.account-page .detail-card h2 {
+  font-size: 17px !important;
+}
+
+.account-page .info-list span,
+.account-page .contact-grid span,
+.account-page .note-box span {
+  font-size: 12px !important;
+}
+
+.account-page .info-list strong,
+.account-page .contact-grid strong {
+  font-size: 14px !important;
+}
+
+.account-page .note-box p {
+  font-size: 13px !important;
+}
+
+.account-page .profile-intro strong {
+  font-size: 16px !important;
+}
+
+.account-page .profile-intro span {
+  font-size: 12px !important;
+}
+
+.account-page .field span {
+  font-size: 13px !important;
+}
+
+.account-page .field input {
+  font-size: 14px !important;
+}
+
+.account-page .form-actions button,
+.account-page .message {
+  font-size: 13px !important;
+}
+
+/* Home public - tăng các cỡ chữ quá nhỏ nếu component đang dùng kiểu 9-11px */
+.public-shell main p {
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .booking-page .booking-heading h1,
+  .account-page .page-heading h1,
+  .account-page .detail-heading h1 {
+    font-size: 32px !important;
+  }
+
+  .public-shell .nav-link,
+  .public-shell .login-link,
+  .public-shell .booking-link,
+  .public-shell .account-name {
+    font-size: 13px !important;
+  }
+}
