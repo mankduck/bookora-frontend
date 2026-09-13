@@ -1,0 +1,1180 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: grid;
+  place-items: center;
+  padding: 26px;
+  background: rgba(17, 18, 16, 0.58);
+  backdrop-filter: blur(3px);
+}
+
+.booking-modal {
+  width: min(1080px, 100%);
+  max-height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f5f5f2;
+  box-shadow:
+    0 30px 100px
+    rgba(0, 0, 0, 0.24);
+}
+
+.modal-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e1db;
+  background: #fff;
+}
+
+.eyebrow {
+  display: block;
+  color: #94988f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.modal-header h2 {
+  margin: 5px 0 3px;
+  font-size: 23px;
+}
+
+.modal-header p {
+  margin: 0;
+  color: #858980;
+  font-size: 11px;
+}
+
+.close-button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #dcded7;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.progress {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e1db;
+  background: #fafaf8;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  text-align: left;
+}
+
+.progress-step > span {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: #e9eae5;
+  color: #777b72;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.progress-step > div {
+  display: grid;
+  gap: 1px;
+}
+
+.progress-step strong {
+  font-size: 11px;
+}
+
+.progress-step small {
+  color: #979b91;
+  font-size: 8px;
+}
+
+.progress-step.active {
+  border-color: #d8dad3;
+  background: #fff;
+}
+
+.progress-step.active > span,
+.progress-step.completed > span {
+  background: #1a1b18;
+  color: #fff;
+}
+
+.modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 22px;
+}
+
+.step-content {
+  padding: 21px;
+  border: 1px solid #e0e1dc;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.section-heading {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-heading > span {
+  width: 29px;
+  height: 29px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #1a1b18;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.section-heading h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.section-heading p {
+  margin: 3px 0 0;
+  color: #92968c;
+  font-size: 10px;
+}
+
+.divider {
+  height: 1px;
+  margin: 23px 0;
+  background: #ecece8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e0e1dc;
+  border-radius: 11px;
+  background: #fff;
+  text-align: left;
+}
+
+.service-card.selected {
+  border-color: #1a1b18;
+  box-shadow:
+    inset 0 0 0 1px #1a1b18;
+}
+
+.service-image {
+  width: 70px;
+  height: 70px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #ededE9;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-image span {
+  color: #989c93;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.service-copy {
+  min-width: 0;
+  display: grid;
+  align-content: center;
+}
+
+.service-copy strong {
+  font-size: 12px;
+}
+
+.service-copy small {
+  margin-top: 2px;
+  color: #999d93;
+  font-size: 8px;
+}
+
+.service-copy p {
+  margin: 6px 25px 0 0;
+  color: #858980;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.service-card > i {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  display: none;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  border-radius: 50%;
+  background: #1a1b18;
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+}
+
+.service-card.selected > i {
+  display: grid;
+}
+
+.variants-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.variant-card {
+  display: grid;
+  padding: 15px;
+  border: 1px solid #e0e1dc;
+  border-radius: 11px;
+  background: #fff;
+  text-align: left;
+}
+
+.variant-card.selected {
+  border-color: #1a1b18;
+  box-shadow:
+    inset 0 0 0 1px #1a1b18;
+}
+
+.variant-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.variant-heading > div {
+  display: grid;
+  gap: 2px;
+}
+
+.variant-heading strong {
+  font-size: 12px;
+}
+
+.variant-heading small {
+  color: #999d93;
+  font-size: 8px;
+}
+
+.variant-heading > span {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #cfd1ca;
+  border-radius: 50%;
+}
+
+.variant-card.selected
+  .variant-heading > span {
+  border: 4px solid #1a1b18;
+}
+
+.variant-card > p {
+  min-height: 40px;
+  margin: 10px 0;
+  color: #83877e;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.variant-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.variant-tags span {
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: #f1f1ed;
+  color: #777b72;
+  font-size: 8px;
+}
+
+.variant-price {
+  display: grid;
+  gap: 2px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeea;
+}
+
+.variant-price del {
+  color: #a1a49c;
+  font-size: 9px;
+}
+
+.variant-price strong {
+  font-size: 15px;
+}
+
+.schedule-layout {
+  display: grid;
+  grid-template-columns:
+    230px 1fr;
+  gap: 20px;
+}
+
+.schedule-sidebar {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field > span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea,
+.coupon-input input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid #dcddd7;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.selected-package {
+  display: grid;
+  gap: 3px;
+  padding: 12px;
+  border-radius: 9px;
+  background: #f5f5f2;
+}
+
+.selected-package span {
+  margin-top: 6px;
+  color: #969a91;
+  font-size: 8px;
+}
+
+.selected-package span:first-child {
+  margin-top: 0;
+}
+
+.selected-package strong {
+  font-size: 10px;
+}
+
+.slots-area {
+  min-height: 230px;
+}
+
+.slots-state,
+.state {
+  min-height: 200px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.state.small {
+  min-height: 80px;
+}
+
+.slots-state strong {
+  font-size: 12px;
+}
+
+.slots-state p {
+  max-width: 320px;
+  margin: 0;
+  color: #878b82;
+  font-size: 10px;
+}
+
+.slots-state.error {
+  color: #984f4f;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.slot-button {
+  min-height: 58px;
+  display: grid;
+  place-content: center;
+  gap: 2px;
+  border: 1px solid #dedfd9;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.slot-button strong {
+  font-size: 12px;
+}
+
+.slot-button span {
+  color: #91958c;
+  font-size: 8px;
+}
+
+.slot-button.selected {
+  border-color: #1a1b18;
+  background: #1a1b18;
+  color: #fff;
+}
+
+.slot-button.selected span {
+  color: #b5b8b0;
+}
+
+.customer-layout {
+  display: grid;
+  grid-template-columns:
+    1.35fr 0.65fr;
+  gap: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.coupon-box {
+  display: grid;
+  gap: 9px;
+  margin-top: 13px;
+  padding: 13px;
+  border-radius: 10px;
+  background: #f5f5f2;
+}
+
+.coupon-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.coupon-heading > div {
+  display: grid;
+  gap: 2px;
+}
+
+.coupon-heading strong {
+  font-size: 11px;
+}
+
+.coupon-heading span {
+  color: #969a91;
+  font-size: 8px;
+}
+
+.coupon-heading button {
+  border: 0;
+  background: transparent;
+  color: #984f4f;
+  font-size: 9px;
+}
+
+.coupon-input {
+  display: grid;
+  grid-template-columns:
+    1fr auto;
+  gap: 7px;
+}
+
+.coupon-input button {
+  padding: 0 12px;
+  border: 0;
+  border-radius: 7px;
+  background: #1a1b18;
+  color: #fff;
+  font-size: 9px;
+}
+
+.coupon-message {
+  margin: 0;
+  font-size: 9px;
+}
+
+.coupon-message.success {
+  color: #467051;
+}
+
+.coupon-message.error {
+  color: #984f4f;
+}
+
+.summary-card {
+  align-self: start;
+  padding: 15px;
+  border: 1px solid #e0e1dc;
+  border-radius: 10px;
+  background: #fafaf8;
+}
+
+.summary-card > span {
+  color: #969a91;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.summary-card h3 {
+  margin: 4px 0 13px;
+  font-size: 14px;
+}
+
+.summary-list,
+.summary-money {
+  display: grid;
+  gap: 7px;
+}
+
+.summary-list > div,
+.summary-money > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.summary-list span,
+.summary-money span {
+  color: #8d9188;
+  font-size: 9px;
+}
+
+.summary-list strong,
+.summary-money strong {
+  font-size: 10px;
+  text-align: right;
+}
+
+.summary-money {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e2dc;
+}
+
+.total-line {
+  padding-top: 7px;
+  border-top: 1px solid #e1e2dc;
+}
+
+.total-line strong {
+  font-size: 14px !important;
+}
+
+.confirm-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.confirm-card {
+  padding: 14px;
+  border: 1px solid #e0e1dc;
+  border-radius: 10px;
+}
+
+.confirm-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+
+.confirm-title strong {
+  font-size: 12px;
+}
+
+.confirm-title button {
+  border: 0;
+  background: transparent;
+  color: #747970;
+  font-size: 9px;
+  text-decoration: underline;
+}
+
+.confirm-card dl {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+
+.confirm-card dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.confirm-card dt {
+  color: #8d9188;
+  font-size: 9px;
+}
+
+.confirm-card dd {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.payment-card {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 8px;
+}
+
+.payment-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.payment-card span {
+  color: #8d9188;
+  font-size: 9px;
+}
+
+.payment-card strong {
+  font-size: 11px;
+}
+
+.note-box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f5f5f2;
+}
+
+.note-box span {
+  color: #8d9188;
+  font-size: 8px;
+}
+
+.note-box p {
+  margin: 4px 0 0;
+  font-size: 10px;
+}
+
+.submit-error {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #efd0d0;
+  border-radius: 9px;
+  background: #fff3f3;
+  color: #964d4d;
+}
+
+.submit-error strong {
+  font-size: 11px;
+}
+
+.submit-error p {
+  margin: 4px 0 0;
+  font-size: 9px;
+}
+
+.modal-footer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 67px;
+  padding: 11px 20px;
+  border-top: 1px solid #dedfd9;
+  background: #1a1b18;
+}
+
+.footer-info {
+  min-width: 160px;
+  display: grid;
+  gap: 2px;
+}
+
+.footer-info span {
+  color: #979b91;
+  font-size: 8px;
+}
+
+.footer-info strong {
+  color: #fff;
+  font-size: 10px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 39px;
+  padding: 0 13px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.primary-button {
+  margin-left: auto;
+  border: 0;
+  background: #fff;
+  color: #1a1b18;
+}
+
+.secondary-button {
+  border: 1px solid #d8dad3;
+  background: #fff;
+  color: #3a3d38;
+}
+
+.modal-footer
+  .secondary-button {
+  border-color: #41433e;
+  background: transparent;
+  color: #c0c3bb;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.success-view {
+  padding: 28px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #507459;
+  color: #fff;
+  font-size: 20px;
+}
+
+.success-view h2 {
+  margin: 6px 0;
+  font-size: 25px;
+}
+
+.success-view > p {
+  margin: 0 0 20px;
+  color: #82867d;
+  font-size: 10px;
+}
+
+.success-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.success-grid > div {
+  display: grid;
+  gap: 3px;
+  padding: 11px;
+  border-radius: 8px;
+  background: #f5f5f2;
+}
+
+.success-grid span,
+.success-money span {
+  color: #90948b;
+  font-size: 8px;
+}
+
+.success-grid strong {
+  font-size: 10px;
+}
+
+.success-money {
+  max-width: 720px;
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px auto 0;
+  text-align: left;
+}
+
+.success-money > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  background: #1a1b18;
+  color: #fff;
+}
+
+.success-money strong {
+  font-size: 11px;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.success-actions
+  .primary-button {
+  margin-left: 0;
+  background: #1a1b18;
+  color: #fff;
+}
+
+/* ===== MODAL TYPOGRAPHY SCALE ===== */
+
+.booking-modal {
+  font-size: 14px;
+}
+
+/* Tiêu đề modal */
+.modal-header h2 {
+  font-size: 25px;
+}
+
+.modal-header p {
+  font-size: 13px;
+}
+
+.eyebrow {
+  font-size: 11px;
+}
+
+/* Thanh 4 bước */
+.progress-step strong {
+  font-size: 13px;
+}
+
+.progress-step small {
+  font-size: 11px;
+}
+
+.progress-step > span {
+  font-size: 11px;
+}
+
+/* Tiêu đề từng section */
+.section-heading h3 {
+  font-size: 18px;
+}
+
+.section-heading p {
+  font-size: 12px;
+}
+
+.section-heading > span {
+  font-size: 10px;
+}
+
+/* Service */
+.service-copy strong {
+  font-size: 14px;
+}
+
+.service-copy small {
+  font-size: 11px;
+}
+
+.service-copy p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Gói dịch vụ */
+.variant-heading strong {
+  font-size: 14px;
+}
+
+.variant-heading small {
+  font-size: 11px;
+}
+
+.variant-card > p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.variant-tags span {
+  font-size: 10px;
+}
+
+.variant-price del {
+  font-size: 11px;
+}
+
+.variant-price strong {
+  font-size: 17px;
+}
+
+/* Form */
+.field > span {
+  font-size: 12px;
+}
+
+.field input,
+.field textarea,
+.coupon-input input {
+  font-size: 13px;
+}
+
+/* Thông tin gói đang chọn */
+.selected-package span {
+  font-size: 10px;
+}
+
+.selected-package strong {
+  font-size: 12px;
+}
+
+/* Khung giờ */
+.slots-state strong {
+  font-size: 14px;
+}
+
+.slots-state p {
+  font-size: 12px;
+}
+
+.slot-button strong {
+  font-size: 14px;
+}
+
+.slot-button span {
+  font-size: 10px;
+}
+
+/* Coupon */
+.coupon-heading strong {
+  font-size: 13px;
+}
+
+.coupon-heading span {
+  font-size: 11px;
+}
+
+.coupon-heading button,
+.coupon-input button {
+  font-size: 11px;
+}
+
+.coupon-message {
+  font-size: 11px;
+}
+
+/* Tóm tắt */
+.summary-card > span {
+  font-size: 10px;
+}
+
+.summary-card h3 {
+  font-size: 16px;
+}
+
+.summary-list span,
+.summary-money span {
+  font-size: 11px;
+}
+
+.summary-list strong,
+.summary-money strong {
+  font-size: 12px;
+}
+
+.total-line strong {
+  font-size: 16px !important;
+}
+
+/* Xác nhận booking */
+.confirm-title strong {
+  font-size: 14px;
+}
+
+.confirm-title button {
+  font-size: 11px;
+}
+
+.confirm-card dt {
+  font-size: 11px;
+}
+
+.confirm-card dd {
+  font-size: 12px;
+}
+
+.payment-card span {
+  font-size: 11px;
+}
+
+.payment-card strong {
+  font-size: 13px;
+}
+
+.note-box span {
+  font-size: 10px;
+}
+
+.note-box p {
+  font-size: 12px;
+}
+
+/* Error */
+.submit-error strong {
+  font-size: 13px;
+}
+
+.submit-error p {
+  font-size: 11px;
+}
+
+/* Footer */
+.footer-info span {
+  font-size: 10px;
+}
+
+.footer-info strong {
+  font-size: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  font-size: 12px;
+}
+
+/* Màn tạo thành công */
+.success-view h2 {
+  font-size: 27px;
+}
+
+.success-view > p {
+  font-size: 12px;
+}
+
+.success-grid span,
+.success-money span {
+  font-size: 10px;
+}
+
+.success-grid strong {
+  font-size: 12px;
+}
+
+.success-money strong {
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .modal-overlay {
+    padding: 0;
+  }
+
+  .booking-modal {
+    width: 100%;
+    height: 100vh;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  .progress,
+  .variants-grid,
+  .services-grid,
+  .form-grid,
+  .confirm-grid,
+  .success-grid,
+  .success-money {
+    grid-template-columns: 1fr;
+  }
+
+  .progress {
+    display: none;
+  }
+
+  .schedule-layout,
+  .customer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .slots-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .field.full,
+  .payment-card {
+    grid-column: auto;
+  }
+}

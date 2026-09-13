@@ -1,0 +1,530 @@
+.coupons-page {
+  display: grid;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #9499a4;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.1px;
+}
+
+.page-heading h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.page-heading p {
+  margin: 8px 0 0;
+  color: #8b909b;
+  font-size: 13px;
+}
+
+.heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading-stat {
+  min-width: 125px;
+  padding: 12px 16px;
+  border: 1px solid #e8e9ed;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.heading-stat span {
+  display: block;
+  color: #979ba5;
+  font-size: 10px;
+}
+
+.heading-stat strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+.create-button {
+  min-height: 48px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 10px;
+  background: #17191e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.coupon-panel {
+  overflow: hidden;
+  border: 1px solid #e9eaed;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #eeeeef;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 39px;
+  padding: 0 12px;
+  border: 1px solid #e3e4e8;
+  border-radius: 9px;
+}
+
+.search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 13px;
+}
+
+.toolbar select,
+.refresh-button {
+  min-height: 39px;
+  padding: 0 12px;
+  border: 1px solid #e3e4e8;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 11px 15px;
+  background: #fafafb;
+  color: #8e929c;
+  font-size: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+td {
+  padding: 13px 15px;
+  border-top: 1px solid #f0f0f1;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.coupon-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.coupon-code {
+  min-width: 86px;
+  padding: 8px 9px;
+  border: 1px dashed #cfd2d8;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: .4px;
+}
+
+.coupon-name-cell > div,
+.value-cell,
+.condition-cell,
+.date-cell {
+  display: grid;
+  gap: 3px;
+}
+
+.coupon-name-cell span,
+.value-cell span,
+.condition-cell span,
+.condition-cell small,
+.date-cell span {
+  color: #979ba5;
+  font-size: 10px;
+}
+
+.value-cell > strong {
+  font-size: 15px;
+}
+
+.usage-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.usage-cell strong {
+  font-size: 17px;
+}
+
+.usage-cell span {
+  color: #969aa3;
+  font-size: 11px;
+}
+
+.status-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.status-active {
+  background: #eaf5ed;
+  color: #467252;
+}
+
+.status-scheduled {
+  background: #e9eff8;
+  color: #4e6488;
+}
+
+.status-expired,
+.status-exhausted {
+  background: #f7e9e7;
+  color: #98574f;
+}
+
+.status-inactive {
+  background: #efefef;
+  color: #74777d;
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.icon-button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e0e1e4;
+  border-radius: 8px;
+  background: #fff;
+  color: #45484f;
+  cursor: pointer;
+}
+
+.icon-button.danger {
+  color: #a75a57;
+}
+
+.toggle-button {
+  width: 38px;
+  height: 22px;
+  padding: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: #d8dadd;
+  cursor: pointer;
+}
+
+.toggle-button span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform .18s ease;
+}
+
+.toggle-button.active {
+  background: #5f7d65;
+}
+
+.toggle-button.active span {
+  transform: translateX(16px);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px;
+  border-top: 1px solid #eee;
+  color: #8e929a;
+  font-size: 11px;
+}
+
+.pagination-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  width: 31px;
+  height: 31px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.state-box {
+  min-height: 260px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 30px;
+  color: #8c9098;
+  text-align: center;
+}
+
+.state-box.error {
+  color: #985654;
+}
+
+.state-box button {
+  margin-top: 6px;
+}
+
+.empty-icon {
+  font-size: 32px;
+}
+
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ececef;
+  border-top-color: #23252a;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(20, 21, 24, .38);
+}
+
+.coupon-modal {
+  width: min(820px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(20, 20, 22, .18);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 20px;
+  border-bottom: 1px solid #ededee;
+}
+
+.modal-header span {
+  color: #9a9da5;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.modal-header h3 {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+
+.close-button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e1e2e5;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.coupon-form {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.coupon-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.coupon-form label > span {
+  color: #747983;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.coupon-form input,
+.coupon-form select,
+.coupon-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dedfe3;
+  border-radius: 9px;
+  outline: 0;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+}
+
+.coupon-form input,
+.coupon-form select {
+  min-height: 40px;
+  padding: 0 11px;
+}
+
+.coupon-form textarea {
+  padding: 10px 11px;
+  resize: vertical;
+}
+
+.coupon-form input:focus,
+.coupon-form select:focus,
+.coupon-form textarea:focus {
+  border-color: #a9adb5;
+}
+
+.switch-row {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  background: #f8f8f9;
+}
+
+.switch-row > div {
+  display: grid;
+  gap: 3px;
+}
+
+.switch-row strong {
+  font-size: 12px;
+}
+
+.switch-row > div span {
+  color: #8e929b;
+  font-size: 10px;
+}
+
+.switch-row input {
+  width: 18px;
+  min-height: 18px;
+}
+
+.form-error {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff0ef;
+  color: #9c514d;
+  font-size: 11px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.secondary-button,
+.primary-button {
+  min-height: 39px;
+  padding: 0 14px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary-button {
+  border: 1px solid #dedfe2;
+  background: #fff;
+}
+
+.primary-button {
+  border: 1px solid #17191e;
+  background: #17191e;
+  color: #fff;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .page-heading,
+  .heading-actions,
+  .toolbar {
+    align-items: stretch;
+  }
+
+  .page-heading,
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .two-columns,
+  .three-columns {
+    grid-template-columns: 1fr;
+  }
+}

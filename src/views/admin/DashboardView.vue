@@ -203,7 +203,9 @@
 </template>
 
 <script setup lang="ts">
-import { useAuthStore } from '@/stores/auth'
+import { useDashboardView } from './DashboardView.ts'
 
-const auth = useAuthStore()
+const {
+  auth,
+} = useDashboardView()
 </script>

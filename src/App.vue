@@ -3,5 +3,9 @@
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { useApp } from './App.ts'
+
+const {
+  RouterView,
+} = useApp()
 </script>

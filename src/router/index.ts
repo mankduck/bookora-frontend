@@ -2,411 +2,238 @@ import {
   createRouter,
   createWebHistory,
   type RouteLocationNormalized,
-} from 'vue-router'
+} from "vue-router";
 
-import {
-  useAuthStore,
-} from '@/stores/auth'
+import { useAuthStore } from "@/stores/auth";
 
-import PublicLayout
-  from '@/layouts/PublicLayout.vue'
+import PublicLayout from "@/layouts/PublicLayout.vue";
+import AdminLayout from "@/layouts/AdminLayout.vue";
 
-import AdminLayout
-  from '@/layouts/AdminLayout.vue'
+import HomeView from "@/views/public/HomeView.vue";
+import BookingView from "@/views/public/BookingView.vue";
 
-import HomeView
-  from '@/views/public/HomeView.vue'
+import LoginView from "@/views/auth/LoginView.vue";
+import RegisterView from "@/views/auth/RegisterView.vue";
 
-import BookingView
-  from '@/views/public/BookingView.vue'
+import AccountBookingsView from "@/views/account/AccountBookingsView.vue";
+import AccountBookingDetailView from "@/views/account/AccountBookingDetailView.vue";
+import AccountProfileView from "@/views/account/AccountProfileView.vue";
 
-import LoginView
-  from '@/views/auth/LoginView.vue'
-
-import RegisterView
-  from '@/views/auth/RegisterView.vue'
-
-import AccountBookingsView
-  from '@/views/account/AccountBookingsView.vue'
-
-import AccountBookingDetailView
-  from '@/views/account/AccountBookingDetailView.vue'
-
-import AccountProfileView
-  from '@/views/account/AccountProfileView.vue'
-
-import DashboardView
-  from '@/views/admin/DashboardView.vue'
-
-import ServiceCategoriesView
-  from '@/views/admin/services/ServiceCategoriesView.vue'
-
-import ServicesView
-  from '@/views/admin/services/ServicesView.vue'
-
-import StaffView
-  from '@/views/admin/staff/StaffView.vue'
-
-import BookingsView
-  from '@/views/admin/bookings/BookingsView.vue'
+import DashboardView from "@/views/admin/DashboardView.vue";
+import ServiceCategoriesView from "@/views/admin/services/ServiceCategoriesView.vue";
+import ServicesView from "@/views/admin/services/ServicesView.vue";
+import StaffView from "@/views/admin/staff/StaffView.vue";
+import BookingsView from "@/views/admin/bookings/BookingsView.vue";
+import CustomersView from "@/views/admin/customers/CustomersView.vue";
+import CouponsView from "@/views/admin/coupons/CouponsView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
 
   routes: [
-    /*
-    |--------------------------------------------------------------------------
-    | PUBLIC WEBSITE
-    |--------------------------------------------------------------------------
-    */
-
     {
-      path: '/',
+      path: "/",
       component: PublicLayout,
-
       children: [
         {
-          path: '',
-          name: 'home',
+          path: "",
+          name: "home",
           component: HomeView,
         },
 
-        /*
-        |--------------------------------------------------------------------------
-        | CUSTOMER BOOKING
-        |--------------------------------------------------------------------------
-        */
-
         {
-          path: 'booking',
-          name: 'booking',
+          path: "booking",
+          name: "booking",
           component: BookingView,
-
           meta: {
             requiresAuth: true,
-            role: 'customer',
-          },
-        },
-
-        /*
-        |--------------------------------------------------------------------------
-        | CUSTOMER ACCOUNT
-        |--------------------------------------------------------------------------
-        */
-
-        {
-          path: 'account/bookings',
-          name: 'account-bookings',
-          component:
-            AccountBookingsView,
-
-          meta: {
-            requiresAuth: true,
-            role: 'customer',
+            role: "customer",
           },
         },
 
         {
-          path:
-            'account/bookings/:id',
-
-          name:
-            'account-booking-detail',
-
-          component:
-            AccountBookingDetailView,
-
+          path: "account/bookings",
+          name: "account-bookings",
+          component: AccountBookingsView,
           meta: {
             requiresAuth: true,
-            role: 'customer',
+            role: "customer",
           },
         },
 
         {
-          path: 'account/profile',
-          name: 'account-profile',
-          component:
-            AccountProfileView,
-
+          path: "account/bookings/:id",
+          name: "account-booking-detail",
+          component: AccountBookingDetailView,
           meta: {
             requiresAuth: true,
-            role: 'customer',
+            role: "customer",
+          },
+        },
+
+        {
+          path: "account/profile",
+          name: "account-profile",
+          component: AccountProfileView,
+          meta: {
+            requiresAuth: true,
+            role: "customer",
           },
         },
       ],
     },
 
-    /*
-    |--------------------------------------------------------------------------
-    | AUTH
-    |--------------------------------------------------------------------------
-    */
-
     {
-      path: '/login',
-      name: 'login',
+      path: "/login",
+      name: "login",
       component: LoginView,
-
       meta: {
         guestOnly: true,
       },
     },
 
     {
-      path: '/register',
-      name: 'register',
+      path: "/register",
+      name: "register",
       component: RegisterView,
-
       meta: {
         guestOnly: true,
       },
     },
 
-    /*
-    |--------------------------------------------------------------------------
-    | ADMIN
-    |--------------------------------------------------------------------------
-    */
-
     {
-      path: '/admin',
+      path: "/admin",
       component: AdminLayout,
-
       meta: {
         requiresAuth: true,
-        role: 'admin',
+        role: "admin",
       },
 
       children: [
         {
-          path: '',
-          redirect:
-            '/admin/dashboard',
+          path: "",
+          redirect: "/admin/dashboard",
         },
 
         {
-          path: 'dashboard',
-          name:
-            'admin-dashboard',
-          component:
-            DashboardView,
+          path: "dashboard",
+          name: "admin-dashboard",
+          component: DashboardView,
         },
 
         {
-          path:
-            'service-categories',
-
-          name:
-            'admin-service-categories',
-
-          component:
-            ServiceCategoriesView,
+          path: "service-categories",
+          name: "admin-service-categories",
+          component: ServiceCategoriesView,
         },
 
         {
-          path: 'services',
-          name:
-            'admin-services',
-          component:
-            ServicesView,
+          path: "services",
+          name: "admin-services",
+          component: ServicesView,
         },
 
         {
-          path: 'staff',
-          name:
-            'admin-staff',
-          component:
-            StaffView,
+          path: "staff",
+          name: "admin-staff",
+          component: StaffView,
         },
 
-        /*
-        |--------------------------------------------------------------------------
-        | ADMIN BOOKINGS
-        |--------------------------------------------------------------------------
-        */
+        {
+          path: "customers",
+          name: "admin-customers",
+          component: CustomersView,
+        },
 
         {
-          path: 'bookings',
-          name:
-            'admin-bookings',
-          component:
-            BookingsView,
+          path: "coupons",
+          name: "admin-coupons",
+          component: CouponsView,
+        },
+
+        {
+          path: "bookings",
+          name: "admin-bookings",
+          component: BookingsView,
         },
       ],
     },
   ],
-})
-
-/*
-|--------------------------------------------------------------------------
-| ROLE HELPERS
-|--------------------------------------------------------------------------
-*/
+});
 
 const userHasRole = (
-  auth: ReturnType<
-    typeof useAuthStore
-  >,
+  auth: ReturnType<typeof useAuthStore>,
   roleCode: string,
 ) => {
-  return Boolean(
-    auth.user?.roles?.some(
-      (role) =>
-        role.code ===
-        roleCode,
-    ),
-  )
-}
+  return Boolean(auth.user?.roles?.some((role) => role.code === roleCode));
+};
 
-const getRoleHome = (
-  auth: ReturnType<
-    typeof useAuthStore
-  >,
-) => {
-  if (
-    userHasRole(
-      auth,
-      'admin',
-    )
-  ) {
-    return '/admin/dashboard'
+const getRoleHome = (auth: ReturnType<typeof useAuthStore>) => {
+  if (userHasRole(auth, "admin")) {
+    return "/admin/dashboard";
   }
 
-  return '/'
-}
+  return "/";
+};
 
-/*
-|--------------------------------------------------------------------------
-| LOAD AUTH
-|--------------------------------------------------------------------------
-*/
-
-const ensureAuthLoaded =
-  async (
-    auth: ReturnType<
-      typeof useAuthStore
-    >,
-  ) => {
-    if (
-      auth.initialized ||
-      auth.loading
-    ) {
-      return
-    }
-
-    try {
-      await auth.fetchMe()
-    } catch {
-      //
-    }
+const ensureAuthLoaded = async (auth: ReturnType<typeof useAuthStore>) => {
+  if (auth.initialized || auth.loading) {
+    return;
   }
 
-/*
-|--------------------------------------------------------------------------
-| LOGIN REDIRECT
-|--------------------------------------------------------------------------
-*/
+  try {
+    await auth.fetchMe();
+  } catch {
+    //
+  }
+};
 
-const buildLoginRedirect = (
-  to: RouteLocationNormalized,
-) => ({
-  name: 'login',
+const buildLoginRedirect = (to: RouteLocationNormalized) => ({
+  name: "login",
 
   query: {
-    redirect:
-      to.fullPath,
+    redirect: to.fullPath,
   },
-})
+});
 
-/*
-|--------------------------------------------------------------------------
-| GLOBAL GUARD
-|--------------------------------------------------------------------------
-*/
+router.beforeEach(async (to) => {
+  const auth = useAuthStore();
 
-router.beforeEach(
-  async (to) => {
-    const auth =
-      useAuthStore()
+  const needsAuth = Boolean(to.meta.requiresAuth);
 
-    const needsAuth =
-      Boolean(
-        to.meta.requiresAuth,
-      )
+  const guestOnly = Boolean(to.meta.guestOnly);
 
-    const guestOnly =
-      Boolean(
-        to.meta.guestOnly,
-      )
+  if (needsAuth || guestOnly) {
+    await ensureAuthLoaded(auth);
+  }
 
-    if (
-      needsAuth ||
-      guestOnly
-    ) {
-      await ensureAuthLoaded(
-        auth,
-      )
-    }
+  if (needsAuth && !auth.user) {
+    return buildLoginRedirect(to);
+  }
 
-    /*
-    |--------------------------------------------------------------------------
-    | PROTECTED ROUTE
-    |--------------------------------------------------------------------------
-    */
+  const requiredRole = typeof to.meta.role === "string" ? to.meta.role : null;
+
+  if (needsAuth && requiredRole && !userHasRole(auth, requiredRole)) {
+    return getRoleHome(auth);
+  }
+
+  if (guestOnly && auth.user) {
+    const redirect =
+      typeof to.query.redirect === "string" && to.query.redirect.startsWith("/")
+        ? to.query.redirect
+        : getRoleHome(auth);
 
     if (
-      needsAuth &&
-      !auth.user
+      (redirect.startsWith("/booking") || redirect.startsWith("/account")) &&
+      !userHasRole(auth, "customer")
     ) {
-      return buildLoginRedirect(
-        to,
-      )
+      return getRoleHome(auth);
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | ROLE
-    |--------------------------------------------------------------------------
-    */
+    return redirect;
+  }
 
-    if (
-      needsAuth &&
-      to.meta.role
-    ) {
-      const requiredRole =
-        String(
-          to.meta.role,
-        )
+  return true;
+});
 
-      if (
-        !userHasRole(
-          auth,
-          requiredRole,
-        )
-      ) {
-        return getRoleHome(
-          auth,
-        )
-      }
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | GUEST ONLY
-    |--------------------------------------------------------------------------
-    */
-
-    if (
-      guestOnly &&
-      auth.user
-    ) {
-      return getRoleHome(
-        auth,
-      )
-    }
-
-    return true
-  },
-)
-
-export default router
+export default router;

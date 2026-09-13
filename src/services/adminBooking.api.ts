@@ -211,11 +211,16 @@ const adminBookingApi = {
     return response.data.data.booking as AdminBooking;
   },
 
-
   async markDepositPaid(bookingId: number) {
     const response = await api.post(
       `/api/v1/admin/bookings/${bookingId}/mark-deposit-paid`,
     );
+
+    return response.data.data.booking as AdminBooking;
+  },
+
+  async markPaid(id: number) {
+    const response = await api.post(`/api/v1/admin/bookings/${id}/mark-paid`);
 
     return response.data.data.booking as AdminBooking;
   },
