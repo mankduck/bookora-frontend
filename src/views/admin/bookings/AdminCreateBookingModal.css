@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: var(--radius-18);
   background: #f5f5f2;
   box-shadow:
     0 30px 100px
@@ -36,29 +36,29 @@
 .eyebrow {
   display: block;
   color: #94988f;
-  font-size: 9px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
   letter-spacing: 1.5px;
 }
 
 .modal-header h2 {
   margin: 5px 0 3px;
-  font-size: 23px;
+  font-size: var(--heading-md);
 }
 
 .modal-header p {
   margin: 0;
   color: #858980;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .close-button {
   width: 38px;
   height: 38px;
   border: 1px solid #dcded7;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff;
-  font-size: 21px;
+  font-size: var(--heading-md);
   cursor: pointer;
 }
 
@@ -79,7 +79,7 @@
   gap: 9px;
   padding: 8px 10px;
   border: 1px solid transparent;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: transparent;
   text-align: left;
 }
@@ -90,11 +90,11 @@
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  border-radius: 7px;
+  border-radius: var(--radius-7);
   background: #e9eae5;
   color: #777b72;
-  font-size: 9px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
 }
 
 .progress-step > div {
@@ -103,12 +103,12 @@
 }
 
 .progress-step strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .progress-step small {
   color: #979b91;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .progress-step.active {
@@ -132,7 +132,7 @@
 .step-content {
   padding: 21px;
   border: 1px solid #e0e1dc;
-  border-radius: 14px;
+  border-radius: var(--radius-14);
   background: #fff;
 }
 
@@ -148,22 +148,22 @@
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #1a1b18;
   color: #fff;
-  font-size: 8px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
 }
 
 .section-heading h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .section-heading p {
   margin: 3px 0 0;
   color: #92968c;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .divider {
@@ -185,7 +185,7 @@
   gap: 12px;
   padding: 12px;
   border: 1px solid #e0e1dc;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #fff;
   text-align: left;
 }
@@ -203,7 +203,7 @@
   overflow: hidden;
   display: grid;
   place-items: center;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #ededE9;
 }
 
@@ -215,8 +215,8 @@
 
 .service-image span {
   color: #989c93;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: var(--heading-md);
+  font-weight: var(--font-weight-800);
 }
 
 .service-copy {
@@ -226,20 +226,20 @@
 }
 
 .service-copy strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .service-copy small {
   margin-top: 2px;
   color: #999d93;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .service-copy p {
   margin: 6px 25px 0 0;
   color: #858980;
-  font-size: 9px;
-  line-height: 1.45;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_45);
 }
 
 .service-card > i {
@@ -250,10 +250,10 @@
   width: 19px;
   height: 19px;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #1a1b18;
   color: #fff;
-  font-size: 8px;
+  font-size: var(--text-secondary);
   font-style: normal;
 }
 
@@ -272,7 +272,7 @@
   display: grid;
   padding: 15px;
   border: 1px solid #e0e1dc;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #fff;
   text-align: left;
 }
@@ -295,19 +295,19 @@
 }
 
 .variant-heading strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .variant-heading small {
   color: #999d93;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .variant-heading > span {
   width: 14px;
   height: 14px;
   border: 1px solid #cfd1ca;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 
 .variant-card.selected
@@ -319,8 +319,8 @@
   min-height: 40px;
   margin: 10px 0;
   color: #83877e;
-  font-size: 9px;
-  line-height: 1.45;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_45);
 }
 
 .variant-tags {
@@ -331,10 +331,10 @@
 
 .variant-tags span {
   padding: 4px 6px;
-  border-radius: 5px;
+  border-radius: var(--radius-5);
   background: #f1f1ed;
   color: #777b72;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price {
@@ -347,11 +347,11 @@
 
 .variant-price del {
   color: #a1a49c;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price strong {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .schedule-layout {
@@ -377,8 +377,8 @@
 }
 
 .field > span {
-  font-size: 10px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .field input,
@@ -388,11 +388,11 @@
   box-sizing: border-box;
   padding: 10px 11px;
   border: 1px solid #dcddd7;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   outline: none;
   background: #fff;
   font: inherit;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .field textarea {
@@ -403,14 +403,14 @@
   display: grid;
   gap: 3px;
   padding: 12px;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #f5f5f2;
 }
 
 .selected-package span {
   margin-top: 6px;
   color: #969a91;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .selected-package span:first-child {
@@ -418,7 +418,7 @@
 }
 
 .selected-package strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .slots-area {
@@ -440,14 +440,14 @@
 }
 
 .slots-state strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .slots-state p {
   max-width: 320px;
   margin: 0;
   color: #878b82;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .slots-state.error {
@@ -467,17 +467,17 @@
   place-content: center;
   gap: 2px;
   border: 1px solid #dedfd9;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
 }
 
 .slot-button strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .slot-button span {
   color: #91958c;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .slot-button.selected {
@@ -509,7 +509,7 @@
   gap: 9px;
   margin-top: 13px;
   padding: 13px;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #f5f5f2;
 }
 
@@ -525,19 +525,19 @@
 }
 
 .coupon-heading strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-heading span {
   color: #969a91;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-heading button {
   border: 0;
   background: transparent;
   color: #984f4f;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-input {
@@ -550,15 +550,15 @@
 .coupon-input button {
   padding: 0 12px;
   border: 0;
-  border-radius: 7px;
+  border-radius: var(--radius-7);
   background: #1a1b18;
   color: #fff;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-message {
   margin: 0;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-message.success {
@@ -573,20 +573,20 @@
   align-self: start;
   padding: 15px;
   border: 1px solid #e0e1dc;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #fafaf8;
 }
 
 .summary-card > span {
   color: #969a91;
-  font-size: 8px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
   letter-spacing: 1px;
 }
 
 .summary-card h3 {
   margin: 4px 0 13px;
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .summary-list,
@@ -605,12 +605,12 @@
 .summary-list span,
 .summary-money span {
   color: #8d9188;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .summary-list strong,
 .summary-money strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
   text-align: right;
 }
 
@@ -626,7 +626,7 @@
 }
 
 .total-line strong {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .confirm-grid {
@@ -639,7 +639,7 @@
 .confirm-card {
   padding: 14px;
   border: 1px solid #e0e1dc;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
 }
 
 .confirm-title {
@@ -650,14 +650,14 @@
 }
 
 .confirm-title strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .confirm-title button {
   border: 0;
   background: transparent;
   color: #747970;
-  font-size: 9px;
+  font-size: var(--text-secondary);
   text-decoration: underline;
 }
 
@@ -675,13 +675,13 @@
 
 .confirm-card dt {
   color: #8d9188;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .confirm-card dd {
   margin: 0;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   text-align: right;
 }
 
@@ -699,46 +699,46 @@
 
 .payment-card span {
   color: #8d9188;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .payment-card strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .note-box {
   margin-top: 10px;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #f5f5f2;
 }
 
 .note-box span {
   color: #8d9188;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .note-box p {
   margin: 4px 0 0;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .submit-error {
   margin-top: 12px;
   padding: 12px;
   border: 1px solid #efd0d0;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff3f3;
   color: #964d4d;
 }
 
 .submit-error strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .submit-error p {
   margin: 4px 0 0;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .modal-footer {
@@ -760,21 +760,21 @@
 
 .footer-info span {
   color: #979b91;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .footer-info strong {
   color: #fff;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .primary-button,
 .secondary-button {
   min-height: 39px;
   padding: 0 13px;
-  border-radius: 8px;
-  font-size: 10px;
-  font-weight: 750;
+  border-radius: var(--radius-8);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   cursor: pointer;
 }
 
@@ -814,21 +814,21 @@ button:disabled {
   display: grid;
   place-items: center;
   margin: 0 auto 15px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #507459;
   color: #fff;
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 .success-view h2 {
   margin: 6px 0;
-  font-size: 25px;
+  font-size: var(--heading-md);
 }
 
 .success-view > p {
   margin: 0 0 20px;
   color: #82867d;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .success-grid {
@@ -845,18 +845,18 @@ button:disabled {
   display: grid;
   gap: 3px;
   padding: 11px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #f5f5f2;
 }
 
 .success-grid span,
 .success-money span {
   color: #90948b;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .success-grid strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .success-money {
@@ -873,13 +873,13 @@ button:disabled {
   display: flex;
   justify-content: space-between;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #1a1b18;
   color: #fff;
 }
 
 .success-money strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .success-actions {
@@ -899,242 +899,242 @@ button:disabled {
 /* ===== MODAL TYPOGRAPHY SCALE ===== */
 
 .booking-modal {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 /* Tiêu đề modal */
 .modal-header h2 {
-  font-size: 25px;
+  font-size: var(--heading-md);
 }
 
 .modal-header p {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .eyebrow {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Thanh 4 bước */
 .progress-step strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .progress-step small {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .progress-step > span {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Tiêu đề từng section */
 .section-heading h3 {
-  font-size: 18px;
+  font-size: var(--heading-sm);
 }
 
 .section-heading p {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .section-heading > span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 /* Service */
 .service-copy strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .service-copy small {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .service-copy p {
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_55);
 }
 
 /* Gói dịch vụ */
 .variant-heading strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .variant-heading small {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .variant-card > p {
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_55);
 }
 
 .variant-tags span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price del {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price strong {
-  font-size: 17px;
+  font-size: var(--heading-sm);
 }
 
 /* Form */
 .field > span {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .field input,
 .field textarea,
 .coupon-input input {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 /* Thông tin gói đang chọn */
 .selected-package span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .selected-package strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Khung giờ */
 .slots-state strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .slots-state p {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .slot-button strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .slot-button span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 /* Coupon */
 .coupon-heading strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .coupon-heading span {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-heading button,
 .coupon-input button {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-message {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Tóm tắt */
 .summary-card > span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .summary-card h3 {
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .summary-list span,
 .summary-money span {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .summary-list strong,
 .summary-money strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .total-line strong {
-  font-size: 16px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 /* Xác nhận booking */
 .confirm-title strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .confirm-title button {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .confirm-card dt {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .confirm-card dd {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .payment-card span {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .payment-card strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .note-box span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .note-box p {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Error */
 .submit-error strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .submit-error p {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Footer */
 .footer-info span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .footer-info strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .primary-button,
 .secondary-button {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Màn tạo thành công */
 .success-view h2 {
-  font-size: 27px;
+  font-size: var(--heading-md);
 }
 
 .success-view > p {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .success-grid span,
 .success-money span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .success-grid strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .success-money strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 @media (max-width: 760px) {

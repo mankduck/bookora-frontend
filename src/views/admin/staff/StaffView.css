@@ -12,19 +12,19 @@
 
 .page-heading h2 {
   margin: 6px 0;
-  font-size: 25px;
+  font-size: var(--heading-md);
 }
 
 .page-heading p {
   margin: 0;
   color: #8d919b;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .staff-panel {
   overflow: hidden;
   border: 1px solid #e8e9ed;
-  border-radius: 15px;
+  border-radius: var(--radius-15);
   background: #fff;
 }
 
@@ -42,7 +42,7 @@
   gap: 8px;
   padding: 0 12px;
   border: 1px solid #e4e6ea;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #f8f9fa;
 }
 
@@ -58,7 +58,7 @@
   height: 40px;
   padding: 0 11px;
   border: 1px solid #e4e6ea;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff;
 }
 
@@ -73,7 +73,7 @@
 .empty p {
   margin: 6px 0 17px;
   color: #969aa4;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .staff-grid {
@@ -88,7 +88,7 @@
 .staff-card {
   padding: 17px;
   border: 1px solid #e5e7ea;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #fff;
 }
 
@@ -103,10 +103,10 @@
   height: 49px;
   display: grid;
   place-items: center;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #22252c;
   color: #fff;
-  font-weight: 700;
+  font-weight: var(--font-weight-700);
 }
 
 .staff-basic {
@@ -123,24 +123,24 @@
 
 .staff-name-row h3 {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .staff-basic > span {
   color: #8c9099;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .position {
   color: #5c6069;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .status {
   padding: 4px 7px;
-  border-radius: 99px;
-  font-size: 8px;
-  font-weight: 650;
+  border-radius: var(--radius-pill-sm);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .status.active {
@@ -171,11 +171,11 @@
 
 .staff-meta span {
   color: #999da6;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .staff-meta strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .service-tags {
@@ -187,10 +187,10 @@
 
 .service-tags span {
   padding: 5px 7px;
-  border-radius: 6px;
+  border-radius: var(--radius-6);
   background: #f1f2f4;
   color: #61656e;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .service-tags .muted-tag {
@@ -207,9 +207,9 @@
 .staff-actions button {
   padding: 7px 10px;
   border: 1px solid #e1e3e7;
-  border-radius: 7px;
+  border-radius: var(--radius-7);
   background: #fff;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .staff-actions .danger {
@@ -231,7 +231,7 @@
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   padding: 24px;
-  border-radius: 17px;
+  border-radius: var(--radius-17);
   background: #fff;
 }
 
@@ -243,22 +243,22 @@
 
 .modal-heading h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: var(--heading-sm);
 }
 
 .modal-heading p {
   margin: 5px 0 0;
   color: #979ba4;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .modal-close {
   width: 31px;
   height: 31px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #f1f2f4;
-  font-size: 19px;
+  font-size: var(--heading-sm);
 }
 
 .form {
@@ -279,12 +279,12 @@
 }
 
 .section-heading strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .section-heading span {
   color: #999da6;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .form-grid {
@@ -299,8 +299,8 @@
 }
 
 .form-field label {
-  font-size: 10px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .form-field input,
@@ -308,11 +308,11 @@
 .form-field textarea {
   width: 100%;
   border: 1px solid #e0e2e6;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fbfbfc;
   outline: none;
   font: inherit;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .form-field input,
@@ -330,7 +330,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .service-selector {
@@ -346,8 +346,8 @@
   gap: 7px;
   padding: 10px;
   border: 1px solid #e3e5e9;
-  border-radius: 8px;
-  font-size: 10px;
+  border-radius: var(--radius-8);
+  font-size: var(--text-secondary);
 }
 
 .schedule-list {
@@ -364,7 +364,7 @@
   gap: 8px;
   padding: 7px 10px;
   border: 1px solid #e9eaed;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
 }
 
 .day-toggle {
@@ -374,20 +374,20 @@
 }
 
 .day-toggle strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .schedule-row input[type="time"] {
   height: 31px;
   padding: 0 7px;
   border: 1px solid #e0e2e6;
-  border-radius: 7px;
-  font-size: 10px;
+  border-radius: var(--radius-7);
+  font-size: var(--text-secondary);
 }
 
 .schedule-row > span {
   color: #999da6;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .day-off {
@@ -397,10 +397,10 @@
 .form-error {
   margin: 0;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff2f2;
   color: #b84545;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .modal-actions {
@@ -413,171 +413,171 @@
   height: 40px;
   padding: 0 14px;
   border: 1px solid #e1e3e7;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 /* ===== STAFF TYPOGRAPHY SCALE ===== */
 
 .staff-page {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 /* Header trang */
 .page-heading .eyebrow {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .page-heading h2 {
-  font-size: 30px;
+  font-size: var(--heading-lg);
 }
 
 .page-heading p {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: var(--text-main);
+  line-height: var(--line-height-1_6);
 }
 
 /* Nút chính */
 .primary-button,
 .secondary-button {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Toolbar */
 .search-box input,
 .toolbar select {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .search-box span {
-  font-size: 17px;
+  font-size: var(--heading-sm);
 }
 
 /* Card nhân viên */
 .staff-name-row h3 {
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .staff-name-row .status {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .staff-basic .position {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .staff-basic > span {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .staff-meta span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .staff-meta strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .service-tags span {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .staff-actions button {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Empty / loading */
 .state,
 .empty {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .empty strong {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .empty p {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* ===== MODAL THÊM / SỬA NHÂN VIÊN ===== */
 
 .modal {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 /* Header modal */
 .modal-heading h3 {
-  font-size: 21px;
+  font-size: var(--heading-md);
 }
 
 .modal-heading p {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_5);
 }
 
 .modal-close {
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 /* Section */
 .section-heading strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 /* Label */
 .form-field label {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Input */
 .form-field input,
 .form-field textarea,
 .form-field select {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 /* Checkbox */
 .checkbox-row {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Dịch vụ phụ trách */
 .service-option,
 .service-checkbox,
 .service-item {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Lịch làm việc */
 .schedule-row,
 .schedule-item {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .schedule-row strong,
 .schedule-item strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .schedule-row input,
 .schedule-item input {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .day-off {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Error */
 .form-error {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Footer modal */
 .modal-actions button {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 @media (max-width: 1050px) {

@@ -20,27 +20,27 @@
 
 .eyebrow {
   color: #94978f;
-  font-size: 9px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1.7px;
 }
 
 .page-heading h1 {
   margin: 8px 0 7px;
-  font-size: 34px;
+  font-size: var(--heading-lg);
   letter-spacing: -1.4px;
 }
 
 .page-heading p {
   margin: 0;
   color: #8b8e86;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .profile-card {
   padding: 25px;
   border: 1px solid #e1e2dc;
-  border-radius: 17px;
+  border-radius: var(--radius-17);
   background: #fff;
 }
 
@@ -58,11 +58,11 @@
   height: 48px;
   display: grid;
   place-items: center;
-  border-radius: 14px;
+  border-radius: var(--radius-14);
   background: #181916;
   color: #fff;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: var(--text-main);
+  font-weight: var(--font-weight-800);
 }
 
 .profile-intro > div:last-child {
@@ -71,12 +71,12 @@
 }
 
 .profile-intro strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .profile-intro span {
   color: #999c94;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .form-grid {
@@ -97,19 +97,19 @@
 
 .field span {
   color: #686c63;
-  font-size: 9px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .field input {
   height: 45px;
   padding: 0 12px;
   border: 1px solid #dfe0da;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   outline: none;
   background: #fafaf8;
   font: inherit;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .field input:focus {
@@ -127,12 +127,12 @@
   height: 42px;
   padding: 0 17px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #181916;
   color: #fff;
   font: inherit;
-  font-size: 9px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
 }
 
 .form-actions button:disabled {
@@ -142,10 +142,10 @@
 .message {
   margin-top: 15px;
   padding: 11px 12px;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #ebf4ec;
   color: #52715a;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .message.error {
@@ -158,10 +158,10 @@
   display: grid;
   place-content: center;
   border: 1px solid #e1e2dc;
-  border-radius: 17px;
+  border-radius: var(--radius-17);
   background: #fff;
   color: #8f928a;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 @media (max-width: 600px) {

@@ -13,7 +13,7 @@
   display: inline-flex;
   margin-bottom: 28px;
   color: #74776f;
-  font-size: 13px;
+  font-size: var(--text-main);
   text-decoration: none;
 }
 
@@ -27,21 +27,21 @@
 
 .eyebrow {
   color: #8b8f85;
-  font-size: 11px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
   letter-spacing: 1.4px;
 }
 
 .detail-heading h1 {
   margin: 7px 0 5px;
-  font-size: 36px;
+  font-size: var(--heading-lg);
   letter-spacing: -1.2px;
 }
 
 .detail-heading p {
   margin: 0;
   color: #858980;
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .heading-badges {
@@ -57,9 +57,9 @@
   align-items: center;
   width: fit-content;
   padding: 7px 10px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 800;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
 }
 
 .status-badge {
@@ -107,7 +107,7 @@
 .detail-card {
   padding: 24px;
   border: 1px solid #dedfd9;
-  border-radius: 16px;
+  border-radius: var(--radius-16);
   background: #fff;
 }
 
@@ -117,7 +117,7 @@
 
 .detail-card h2 {
   margin: 0 0 18px;
-  font-size: 18px;
+  font-size: var(--heading-sm);
 }
 
 .card-title-row {
@@ -155,13 +155,13 @@
 .note-box span,
 .bank-info span {
   color: #8f9389;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .info-list strong,
 .contact-grid strong,
 .bank-info strong {
-  font-size: 14px;
+  font-size: var(--text-main);
   text-align: right;
 }
 
@@ -170,7 +170,7 @@
 }
 
 .total-line strong {
-  font-size: 18px;
+  font-size: var(--heading-sm);
 }
 
 .paid-money {
@@ -183,15 +183,15 @@
 
 .transfer-heading h2 {
   margin: 7px 0 7px;
-  font-size: 24px;
+  font-size: var(--heading-md);
 }
 
 .transfer-heading p {
   max-width: 650px;
   margin: 0;
   color: #797d74;
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: var(--text-main);
+  line-height: var(--line-height-1_65);
 }
 
 .transfer-layout {
@@ -207,7 +207,7 @@
   place-items: center;
   padding: 14px;
   border: 1px solid #e1e2dc;
-  border-radius: 15px;
+  border-radius: var(--radius-15);
   background: #fafaf8;
 }
 
@@ -224,13 +224,13 @@
 }
 
 .qr-empty strong {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .qr-empty span {
   color: #8a8e84;
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_5);
 }
 
 .bank-info {
@@ -238,7 +238,7 @@
   align-content: start;
   gap: 0;
   border: 1px solid #e5e6e0;
-  border-radius: 14px;
+  border-radius: var(--radius-14);
   overflow: hidden;
 }
 
@@ -255,7 +255,7 @@
 }
 
 .money-emphasis {
-  font-size: 19px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 .proof-area {
@@ -266,12 +266,12 @@
 
 .proof-heading strong {
   display: block;
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .proof-heading span {
   color: #92968c;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .proof-current {
@@ -281,7 +281,7 @@
   margin-top: 16px;
   padding: 15px;
   border: 1px solid #e4e5df;
-  border-radius: 14px;
+  border-radius: var(--radius-14);
 }
 
 .proof-image-link {
@@ -292,7 +292,7 @@
   width: 100%;
   height: 130px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
 }
 
 .proof-copy {
@@ -304,8 +304,8 @@
 .proof-copy p {
   margin: 0;
   color: #73776e;
-  font-size: 13px;
-  line-height: 1.55;
+  font-size: var(--text-main);
+  line-height: var(--line-height-1_55);
 }
 
 .rejected-copy {
@@ -318,7 +318,7 @@
   margin-top: 15px;
   padding: 18px;
   border: 1px dashed #cfd1c9;
-  border-radius: 14px;
+  border-radius: var(--radius-14);
   background: #fafaf8;
 }
 
@@ -333,7 +333,7 @@
   gap: 12px;
   padding: 10px;
   border: 1px solid #e2e3dd;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #fff;
 }
 
@@ -342,13 +342,13 @@
   height: 72px;
   display: block;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
 }
 
 .selected-preview span {
   color: #777c73;
-  font-size: 12px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .selected-file {
@@ -356,17 +356,17 @@
   justify-content: space-between;
   gap: 15px;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #fff;
 }
 
 .selected-file strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .selected-file span {
   color: #898d84;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .upload-box textarea {
@@ -374,11 +374,11 @@
   box-sizing: border-box;
   padding: 12px 13px;
   border: 1px solid #dedfd9;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   outline: none;
   background: #fff;
   font: inherit;
-  font-size: 13px;
+  font-size: var(--text-main);
   resize: vertical;
 }
 
@@ -393,9 +393,9 @@
 .danger-button {
   min-height: 40px;
   padding: 0 14px;
-  border-radius: 9px;
-  font-size: 13px;
-  font-weight: 750;
+  border-radius: var(--radius-9);
+  font-size: var(--text-main);
+  font-weight: var(--font-weight-750);
   cursor: pointer;
 }
 
@@ -425,9 +425,9 @@ button:disabled {
 .proof-message {
   margin-top: 12px;
   padding: 10px 12px;
-  border-radius: 9px;
-  font-size: 13px;
-  font-weight: 650;
+  border-radius: var(--radius-9);
+  font-size: var(--text-main);
+  font-weight: var(--font-weight-650);
 }
 
 .proof-message.success {
@@ -453,20 +453,20 @@ button:disabled {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #4d7657;
   color: #fff;
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 .paid-card strong {
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .paid-card p {
   margin: 5px 0 0;
   color: #6f756d;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .contact-grid {
@@ -493,15 +493,15 @@ button:disabled {
 
 .note-box p {
   margin: 5px 0 0;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: var(--text-main);
+  line-height: var(--line-height-1_6);
 }
 
 .state {
   padding: 40px;
-  border-radius: 15px;
+  border-radius: var(--radius-15);
   background: #fff;
-  font-size: 14px;
+  font-size: var(--text-main);
   text-align: center;
 }
 

@@ -6,5 +6,5 @@
 }
 
 html {
-  background: #f6f7fb;
+  background: var(--color-page);
 }

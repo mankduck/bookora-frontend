@@ -1,7 +1,7 @@
 .customers-page {
   display: grid;
   gap: 22px;
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .page-heading {
@@ -15,20 +15,20 @@
   display: block;
   margin-bottom: 7px;
   color: #9499a4;
-  font-size: 11px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1.1px;
 }
 
 .page-heading h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: var(--heading-lg);
 }
 
 .page-heading p {
   margin: 8px 0 0;
   color: #8b909b;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .heading-actions {
@@ -41,37 +41,37 @@
   min-width: 145px;
   padding: 12px 16px;
   border: 1px solid #e8e9ed;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #fff;
 }
 
 .heading-stat span {
   display: block;
   color: #979ba5;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .heading-stat strong {
   display: block;
   margin-top: 3px;
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 .create-button {
   min-height: 48px;
   padding: 0 17px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #17191e;
   color: #fff;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .customer-panel {
   overflow: hidden;
   border: 1px solid #e9eaed;
-  border-radius: 16px;
+  border-radius: var(--radius-16);
   background: #fff;
 }
 
@@ -90,14 +90,14 @@
   min-height: 39px;
   padding: 0 12px;
   border: 1px solid #e3e4e8;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
 }
 
 .search-box input {
   width: 100%;
   border: 0;
   outline: 0;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .toolbar select,
@@ -105,9 +105,9 @@
   min-height: 39px;
   padding: 0 12px;
   border: 1px solid #e3e4e8;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .table-wrap {
@@ -124,14 +124,14 @@ th {
   padding: 11px 15px;
   background: #fafafb;
   color: #8e929c;
-  font-size: 10px;
+  font-size: var(--text-secondary);
   text-align: left;
 }
 
 td {
   padding: 13px 15px;
   border-top: 1px solid #f0f0f1;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .customer-cell {
@@ -151,10 +151,10 @@ td {
 .profile-avatar {
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #17191e;
   color: #fff;
-  font-weight: 700;
+  font-weight: var(--font-weight-700);
 }
 
 .avatar {
@@ -166,15 +166,15 @@ td {
 .contact-cell span,
 .date-cell span {
   color: #999da7;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .status-badge {
   display: inline-flex;
   padding: 5px 8px;
-  border-radius: 99px;
-  font-size: 10px;
-  font-weight: 700;
+  border-radius: var(--radius-pill-sm);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .status-badge.active {
@@ -191,10 +191,10 @@ td {
 .edit-button {
   padding: 7px 10px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #f1f2f4;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .pagination {
@@ -214,7 +214,7 @@ td {
   width: 31px;
   height: 31px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
 }
 
@@ -231,7 +231,7 @@ td {
   height: 23px;
   border: 2px solid #ddd;
   border-top-color: #333;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   animation: spin .7s linear infinite;
 }
 
@@ -252,7 +252,7 @@ td {
 
 .create-modal {
   width: min(620px, 96vw);
-  border-radius: 16px;
+  border-radius: var(--radius-16);
   background: #fff;
   box-shadow: 0 24px 80px rgb(0 0 0 / 18%);
 }
@@ -270,30 +270,30 @@ td {
 .modal-heading span,
 .drawer-header span {
   color: #999da6;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   letter-spacing: 1px;
 }
 
 .modal-heading h3,
 .drawer-header h3 {
   margin: 4px 0 0;
-  font-size: 22px;
+  font-size: var(--heading-md);
 }
 
 .modal-heading p {
   margin: 6px 0 0;
   color: #9297a1;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .close-button {
   width: 35px;
   height: 35px;
   border: 0;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #f2f3f4;
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 .create-form {
@@ -315,8 +315,8 @@ td {
 }
 
 .form-field label {
-  font-size: 12px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .form-field input,
@@ -326,18 +326,18 @@ td {
   min-height: 41px;
   padding: 0 11px;
   border: 1px solid #dadce1;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   outline: 0;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .form-error {
   margin: 0;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff1f1;
   color: #b94f4f;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .modal-actions,
@@ -351,9 +351,9 @@ td {
 .save-button {
   min-height: 37px;
   padding: 0 14px;
-  border-radius: 8px;
-  font-size: 11px;
-  font-weight: 700;
+  border-radius: var(--radius-8);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .cancel-button {
@@ -399,7 +399,7 @@ td {
   margin: 16px;
   padding: 16px;
   border: 1px solid #e5e6e9;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #fff;
 }
 
@@ -422,12 +422,12 @@ td {
 
 .profile-main h4 {
   margin: 0;
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .profile-main span {
   color: #90949d;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .stats-grid {
@@ -441,7 +441,7 @@ td {
 .stats-grid article {
   padding: 14px;
   border: 1px solid #e5e6e9;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #fff;
 }
 
@@ -452,13 +452,13 @@ td {
 .stats-grid span {
   display: block;
   color: #9297a0;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .stats-grid strong {
   display: block;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: var(--heading-sm);
 }
 
 .section-heading {
@@ -475,7 +475,7 @@ td {
 
 .section-heading span {
   color: #969aa3;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .info-list {
@@ -492,11 +492,11 @@ td {
 
 .info-list span {
   color: #9498a1;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .info-list strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .edit-form {
@@ -510,7 +510,7 @@ td {
 }
 
 .edit-form label > span {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .booking-list {
@@ -521,7 +521,7 @@ td {
 .booking-card {
   padding: 11px;
   border: 1px solid #e7e8eb;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
 }
 
 .booking-head {
@@ -538,7 +538,7 @@ td {
 .booking-head span,
 .service-name span {
   color: #969aa3;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .service-name {
@@ -551,7 +551,7 @@ td {
   padding: 25px;
   color: #999da6;
   text-align: center;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 @keyframes spin {

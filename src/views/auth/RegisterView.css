@@ -16,7 +16,7 @@
   width: min(100%, 520px);
   padding: 38px;
   border: 1px solid #e3e4df;
-  border-radius: 20px;
+  border-radius: var(--radius-20);
   background: #fff;
   box-shadow:
     0 24px 70px
@@ -36,10 +36,10 @@
   height: 39px;
   display: grid;
   place-items: center;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #181916;
   color: #fff;
-  font-weight: 800;
+  font-weight: var(--font-weight-800);
 }
 
 .brand > div {
@@ -48,12 +48,12 @@
 }
 
 .brand strong {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .brand div span {
   color: #999c94;
-  font-size: 9px;
+  font-size: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
@@ -64,23 +64,23 @@
 
 .auth-heading > span {
   color: #8e9189;
-  font-size: 9px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1px;
 }
 
 .auth-heading h1 {
   margin: 7px 0 9px;
   color: #181916;
-  font-size: 30px;
+  font-size: var(--heading-lg);
   letter-spacing: -1px;
 }
 
 .auth-heading p {
   margin: 0;
   color: #8f928a;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_6);
 }
 
 .auth-form {
@@ -102,8 +102,8 @@
 
 .auth-form label span {
   color: #676b62;
-  font-size: 10px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .auth-form input {
@@ -112,12 +112,12 @@
   box-sizing: border-box;
   padding: 0 13px;
   border: 1px solid #dedfd9;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   outline: none;
   background: #fafaf8;
   color: #181916;
   font: inherit;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .auth-form input:focus {
@@ -127,22 +127,22 @@
 
 .auth-error {
   padding: 11px 12px;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff0f0;
   color: #bd3838;
-  font-size: 10px;
-  line-height: 1.5;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_5);
 }
 
 .submit-button {
   height: 46px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #181916;
   color: #fff;
   font: inherit;
-  font-size: 11px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
 }
 
 .submit-button:disabled {
@@ -156,12 +156,12 @@
   gap: 5px;
   margin-top: 22px;
   color: #979a92;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .auth-footer a {
   color: #181916;
-  font-weight: 750;
+  font-weight: var(--font-weight-750);
 }
 
 @media (max-width: 600px) {

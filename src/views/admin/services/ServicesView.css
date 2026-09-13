@@ -12,19 +12,19 @@
 
 .page-heading h2 {
   margin: 6px 0;
-  font-size: 25px;
+  font-size: var(--heading-md);
 }
 
 .page-heading p {
   margin: 0;
   color: #8d919b;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .service-panel {
   overflow: hidden;
   border: 1px solid #e8e9ed;
-  border-radius: 15px;
+  border-radius: var(--radius-15);
   background: #fff;
 }
 
@@ -42,7 +42,7 @@
   gap: 8px;
   padding: 0 12px;
   border: 1px solid #e4e6ea;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #f8f9fa;
 }
 
@@ -58,7 +58,7 @@
   height: 40px;
   padding: 0 11px;
   border: 1px solid #e4e6ea;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff;
 }
 
@@ -73,7 +73,7 @@
 .empty p {
   margin: 5px 0 18px;
   color: #969aa4;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .service-list {
@@ -101,9 +101,9 @@
   height: 47px;
   display: grid;
   place-items: center;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #f0f1f4;
-  font-weight: 750;
+  font-weight: var(--font-weight-750);
 }
 
 .service-info {
@@ -118,13 +118,13 @@
 
 .service-title-row h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .service-info p {
   margin: 5px 0 7px;
   color: #8a8e98;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .service-meta {
@@ -132,15 +132,15 @@
   flex-wrap: wrap;
   gap: 13px;
   color: #777b85;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .status,
 .featured-badge {
   padding: 4px 7px;
-  border-radius: 99px;
-  font-size: 8px;
-  font-weight: 650;
+  border-radius: var(--radius-pill-sm);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .status.active {
@@ -168,9 +168,9 @@
 .variant-actions button {
   padding: 7px 10px;
   border: 1px solid #e1e3e7;
-  border-radius: 7px;
+  border-radius: var(--radius-7);
   background: #fff;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .danger {
@@ -196,12 +196,12 @@
 }
 
 .variants-heading strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .variants-heading span {
   color: #969aa4;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .variant-grid {
@@ -214,7 +214,7 @@
 .variant-card {
   padding: 14px;
   border: 1px solid #e5e7ea;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #fff;
 }
 
@@ -228,12 +228,12 @@
 }
 
 .variant-top strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .variant-top span {
   color: #9599a2;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price {
@@ -244,12 +244,12 @@
 }
 
 .variant-price strong {
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .variant-price del {
   color: #a2a5ad;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .variant-details {
@@ -257,16 +257,16 @@
   gap: 10px;
   margin-bottom: 12px;
   color: #7e828c;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .variant-empty {
   padding: 20px;
   border: 1px dashed #dfe1e6;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   color: #9296a0;
   text-align: center;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .modal-backdrop {
@@ -284,7 +284,7 @@
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   padding: 24px;
-  border-radius: 17px;
+  border-radius: var(--radius-17);
   background: #fff;
 }
 
@@ -296,22 +296,22 @@
 
 .modal-heading h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: var(--heading-sm);
 }
 
 .modal-heading p {
   margin: 4px 0 0;
   color: #9498a2;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .modal-close {
   width: 31px;
   height: 31px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #f2f3f5;
-  font-size: 19px;
+  font-size: var(--heading-sm);
 }
 
 .form {
@@ -325,8 +325,8 @@
 }
 
 .form-field label {
-  font-size: 10px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .form-field input,
@@ -335,11 +335,11 @@
   width: 100%;
   padding: 0 11px;
   border: 1px solid #e0e2e6;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   outline: none;
   background: #fbfbfc;
   font: inherit;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .form-field input,
@@ -362,16 +362,16 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .form-error {
   margin: 0;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff2f2;
   color: #b84545;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .modal-actions {
@@ -385,33 +385,33 @@
   height: 40px;
   padding: 0 13px;
   border: 1px solid #e1e3e7;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 /* ===== SERVICES TYPOGRAPHY SCALE ===== */
 
 .services-page,
 .page {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 /* Header */
 .page-heading .eyebrow,
 .page-header .eyebrow {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .page-heading h2,
 .page-header h1 {
-  font-size: 30px;
+  font-size: var(--heading-lg);
 }
 
 .page-heading p,
 .page-header p {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: var(--text-main);
+  line-height: var(--line-height-1_6);
 }
 
 /* Toolbar / filter */
@@ -420,7 +420,7 @@
 .toolbar select,
 .filters-card input,
 .filters-card select {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 /* Nút */
@@ -430,78 +430,78 @@
 .edit-button,
 .delete-button,
 .add-variant-button {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* Card / table */
 .service-card h3,
 .service-name,
 .service-title {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .service-card p,
 .service-description,
 .service-meta span {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 table th {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 table td {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 table td strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 /* Badge */
 .status,
 .status-badge,
 .featured-badge {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 /* ===== MODAL DỊCH VỤ ===== */
 
 .modal {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .modal-heading h3,
 .modal-header h2 {
-  font-size: 21px;
+  font-size: var(--heading-md);
 }
 
 .modal-heading p,
 .modal-header p {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_5);
 }
 
 .section-heading strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .form-field label {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .form-field input,
 .form-field textarea,
 .form-field select {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .form-error {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .modal-actions button {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 /* ===== SERVICE VARIANTS / GÓI ===== */
@@ -509,39 +509,39 @@ table td strong {
 .variant-title,
 .variant-card h4,
 .variant-card h3 {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .variant-card p,
 .variant-description {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_5);
 }
 
 .variant-meta span,
 .variant-tag,
 .variant-badge {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price,
 .variant-price strong {
-  font-size: 16px;
+  font-size: var(--heading-sm);
 }
 
 .variant-price del {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 /* Form gói */
 .variant-form label {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .variant-form input,
 .variant-form textarea,
 .variant-form select {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 @media (max-width: 900px) {

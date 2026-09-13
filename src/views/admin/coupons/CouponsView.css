@@ -1,7 +1,7 @@
 .coupons-page {
   display: grid;
   gap: 22px;
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .page-heading {
@@ -15,20 +15,20 @@
   display: block;
   margin-bottom: 7px;
   color: #9499a4;
-  font-size: 11px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1.1px;
 }
 
 .page-heading h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: var(--heading-lg);
 }
 
 .page-heading p {
   margin: 8px 0 0;
   color: #8b909b;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .heading-actions {
@@ -41,38 +41,38 @@
   min-width: 125px;
   padding: 12px 16px;
   border: 1px solid #e8e9ed;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #fff;
 }
 
 .heading-stat span {
   display: block;
   color: #979ba5;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .heading-stat strong {
   display: block;
   margin-top: 3px;
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 .create-button {
   min-height: 48px;
   padding: 0 17px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #17191e;
   color: #fff;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   cursor: pointer;
 }
 
 .coupon-panel {
   overflow: hidden;
   border: 1px solid #e9eaed;
-  border-radius: 16px;
+  border-radius: var(--radius-16);
   background: #fff;
 }
 
@@ -91,14 +91,14 @@
   min-height: 39px;
   padding: 0 12px;
   border: 1px solid #e3e4e8;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
 }
 
 .search-box input {
   width: 100%;
   border: 0;
   outline: 0;
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .toolbar select,
@@ -106,9 +106,9 @@
   min-height: 39px;
   padding: 0 12px;
   border: 1px solid #e3e4e8;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #fff;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .table-wrap {
@@ -125,7 +125,7 @@ th {
   padding: 11px 15px;
   background: #fafafb;
   color: #8e929c;
-  font-size: 10px;
+  font-size: var(--text-secondary);
   text-align: left;
   white-space: nowrap;
 }
@@ -133,7 +133,7 @@ th {
 td {
   padding: 13px 15px;
   border-top: 1px solid #f0f0f1;
-  font-size: 12px;
+  font-size: var(--text-secondary);
   vertical-align: middle;
 }
 
@@ -147,9 +147,9 @@ td {
   min-width: 86px;
   padding: 8px 9px;
   border: 1px dashed #cfd2d8;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fafafa;
-  font-size: 11px;
+  font-size: var(--text-secondary);
   text-align: center;
   letter-spacing: .4px;
 }
@@ -168,11 +168,11 @@ td {
 .condition-cell small,
 .date-cell span {
   color: #979ba5;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .value-cell > strong {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .usage-cell {
@@ -182,21 +182,21 @@ td {
 }
 
 .usage-cell strong {
-  font-size: 17px;
+  font-size: var(--heading-sm);
 }
 
 .usage-cell span {
   color: #969aa3;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .status-badge {
   display: inline-flex;
   width: fit-content;
   padding: 6px 9px;
-  border-radius: 999px;
-  font-size: 10px;
-  font-weight: 750;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   white-space: nowrap;
 }
 
@@ -232,7 +232,7 @@ td {
   width: 32px;
   height: 32px;
   border: 1px solid #e0e1e4;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
   color: #45484f;
   cursor: pointer;
@@ -247,7 +247,7 @@ td {
   height: 22px;
   padding: 2px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: #d8dadd;
   cursor: pointer;
 }
@@ -256,7 +256,7 @@ td {
   display: block;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #fff;
   transition: transform .18s ease;
 }
@@ -276,7 +276,7 @@ td {
   padding: 13px 15px;
   border-top: 1px solid #eee;
   color: #8e929a;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .pagination-actions {
@@ -289,7 +289,7 @@ td {
   width: 31px;
   height: 31px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
 }
 
@@ -313,7 +313,7 @@ td {
 }
 
 .empty-icon {
-  font-size: 32px;
+  font-size: var(--heading-lg);
 }
 
 .loader {
@@ -321,7 +321,7 @@ td {
   height: 24px;
   border: 3px solid #ececef;
   border-top-color: #23252a;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   animation: spin .8s linear infinite;
 }
 
@@ -339,7 +339,7 @@ td {
   width: min(820px, 100%);
   max-height: calc(100vh - 48px);
   overflow-y: auto;
-  border-radius: 16px;
+  border-radius: var(--radius-16);
   background: #fff;
   box-shadow: 0 24px 70px rgba(20, 20, 22, .18);
 }
@@ -354,23 +354,23 @@ td {
 
 .modal-header span {
   color: #9a9da5;
-  font-size: 9px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
   letter-spacing: 1.3px;
 }
 
 .modal-header h3 {
   margin: 4px 0 0;
-  font-size: 20px;
+  font-size: var(--heading-md);
 }
 
 .close-button {
   width: 34px;
   height: 34px;
   border: 1px solid #e1e2e5;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
-  font-size: 19px;
+  font-size: var(--heading-sm);
   cursor: pointer;
 }
 
@@ -400,8 +400,8 @@ td {
 
 .coupon-form label > span {
   color: #747983;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .coupon-form input,
@@ -410,11 +410,11 @@ td {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #dedfe3;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   outline: 0;
   background: #fff;
   font: inherit;
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-form input,
@@ -440,7 +440,7 @@ td {
   justify-content: space-between;
   gap: 20px;
   padding: 13px 14px;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #f8f8f9;
 }
 
@@ -450,12 +450,12 @@ td {
 }
 
 .switch-row strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .switch-row > div span {
   color: #8e929b;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .switch-row input {
@@ -465,10 +465,10 @@ td {
 
 .form-error {
   padding: 10px 12px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff0ef;
   color: #9c514d;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .modal-actions {
@@ -482,9 +482,9 @@ td {
 .primary-button {
   min-height: 39px;
   padding: 0 14px;
-  border-radius: 9px;
-  font-size: 11px;
-  font-weight: 700;
+  border-radius: var(--radius-9);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   cursor: pointer;
 }
 

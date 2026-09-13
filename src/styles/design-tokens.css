@@ -1,0 +1,109 @@
+/*
+|--------------------------------------------------------------------------
+| Bookora Design Tokens
+|--------------------------------------------------------------------------
+|
+| Đây là nguồn cấu hình CSS chung cho toàn bộ frontend.
+| Muốn đổi font, cỡ chữ, độ đậm, line-height hoặc bo góc trên toàn hệ thống,
+| ưu tiên chỉnh tại file này thay vì sửa từng màn hình.
+|
+*/
+
+:root {
+  /* Typography — hệ chữ Bookora tối giản */
+  --font-family-sans: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Hai cấp chữ nội dung dùng xuyên suốt hệ thống */
+  --text-main: 13px;
+  --text-secondary: 12px;
+
+  /* Heading chỉ dùng khi cần phân cấp tiêu đề */
+  --heading-sm: 16px;
+  --heading-md: 20px;
+  --heading-lg: 30px;
+
+  /* Weight chung */
+  --font-weight-400: 400;
+  --font-weight-450: 450;
+  --font-weight-500: 500;
+  --font-weight-550: 550;
+  --font-weight-560: 560;
+  --font-weight-600: 600;
+  --font-weight-650: 650;
+  --font-weight-700: 700;
+  --font-weight-750: 750;
+  --font-weight-800: 800;
+  --font-weight-850: 850;
+
+  --line-height-0_98: 0.98;
+  --line-height-1: 1;
+  --line-height-1_05: 1.05;
+  --line-height-1_12: 1.12;
+  --line-height-1_15: 1.15;
+  --line-height-1_2: 1.2;
+  --line-height-1_3: 1.3;
+  --line-height-1_45: 1.45;
+  --line-height-1_5: 1.5;
+  --line-height-1_55: 1.55;
+  --line-height-1_6: 1.6;
+  --line-height-1_65: 1.65;
+  --line-height-1_7: 1.7;
+  --line-height-1_8: 1.8;
+
+  /* Alias semantic để các component dùng tên dễ hiểu */
+  --text-caption: var(--text-secondary);
+  --text-small: var(--text-secondary);
+  --text-body: var(--text-main);
+  --text-body-lg: var(--text-main);
+  --text-title-sm: var(--heading-sm);
+  --text-title-md: var(--heading-md);
+  --text-title-lg: var(--heading-lg);
+
+  /* Radius */
+  --radius-5: 5px;
+  --radius-6: 6px;
+  --radius-7: 7px;
+  --radius-8: 8px;
+  --radius-9: 9px;
+  --radius-10: 10px;
+  --radius-11: 11px;
+  --radius-12: 12px;
+  --radius-13: 13px;
+  --radius-14: 14px;
+  --radius-15: 15px;
+  --radius-16: 16px;
+  --radius-17: 17px;
+  --radius-18: 18px;
+  --radius-20: 20px;
+  --radius-22: 22px;
+  --radius-23: 23px;
+  --radius-24: 24px;
+  --radius-25: 25px;
+  --radius-round: 50%;
+  --radius-pill: 999px;
+  --radius-pill-sm: 99px;
+
+  /* Shared foundation colors */
+  --color-page: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-text: #16181d;
+  --color-text-strong: #181916;
+  --color-text-muted: #8d9188;
+  --color-border: #e0e1dc;
+  --color-success: #467051;
+  --color-danger: #984f4f;
+  --color-warning: #985a3d;
+}
+
+html {
+  font-family: var(--font-family-sans);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-family-sans);
+}

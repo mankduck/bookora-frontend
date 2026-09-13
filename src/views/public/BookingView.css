@@ -19,19 +19,19 @@
   margin-bottom: 36px;
   color: #7e8179;
   text-decoration: none;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .eyebrow {
   color: #91948c;
-  font-size: 9px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 2px;
 }
 
 .booking-heading h1 {
   margin: 10px 0 12px;
-  font-size: 41px;
+  font-size: var(--heading-lg);
   letter-spacing: -2px;
 }
 
@@ -39,8 +39,8 @@
   max-width: 540px;
   margin: 0;
   color: #83867e;
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_7);
 }
 
 .booking-progress {
@@ -63,13 +63,13 @@
   display: grid;
   place-items: center;
   border: 1px solid #d7d9d3;
-  border-radius: 50%;
-  font-size: 8px;
+  border-radius: var(--radius-round);
+  font-size: var(--text-secondary);
 }
 
 .progress-item strong {
   white-space: nowrap;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .progress-item.active {
@@ -96,7 +96,7 @@
 .booking-card {
   overflow: hidden;
   border: 1px solid #e1e2dd;
-  border-radius: 20px;
+  border-radius: var(--radius-20);
   background: #fff;
 }
 
@@ -120,22 +120,22 @@
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #181916;
   color: #fff;
-  font-size: 8px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .section-title h2 {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .section-title p {
   margin: 4px 0 0;
   color: #969991;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .services-grid {
@@ -151,7 +151,7 @@
   gap: 13px;
   padding: 13px;
   border: 1px solid #e3e4df;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #fff;
   text-align: left;
   transition: 0.2s ease;
@@ -174,7 +174,7 @@
   overflow: hidden;
   display: grid;
   place-items: center;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #ebebe7;
 }
 
@@ -186,8 +186,8 @@
 
 .option-image span {
   color: #a1a49c;
-  font-size: 26px;
-  font-weight: 750;
+  font-size: var(--heading-md);
+  font-weight: var(--font-weight-750);
 }
 
 .option-content {
@@ -197,20 +197,20 @@
 }
 
 .option-content strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .option-content > span {
   margin-top: 2px;
   color: #999c94;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .option-content p {
   margin: 7px 25px 0 0;
   color: #858880;
-  font-size: 8px;
-  line-height: 1.45;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_45);
 }
 
 .check {
@@ -221,10 +221,10 @@
   height: 20px;
   display: none;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #181916;
   color: #fff;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .service-option.selected .check {
@@ -246,7 +246,7 @@
   display: grid;
   padding: 17px;
   border: 1px solid #e2e3de;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #fff;
   text-align: left;
   transition: 0.2s ease;
@@ -273,12 +273,12 @@
 }
 
 .variant-header strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .variant-header div span {
   color: #a0a39b;
-  font-size: 7px;
+  font-size: var(--text-secondary);
 }
 
 .radio {
@@ -287,13 +287,13 @@
   display: grid;
   place-items: center;
   border: 1px solid #d6d8d2;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 
 .radio i {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 
 .variant-option.selected .radio {
@@ -308,8 +308,8 @@
   min-height: 42px;
   margin: 13px 0;
   color: #858880;
-  font-size: 8px;
-  line-height: 1.55;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_55);
 }
 
 .variant-meta {
@@ -320,10 +320,10 @@
 
 .variant-meta span {
   padding: 5px 7px;
-  border-radius: 6px;
+  border-radius: var(--radius-6);
   background: #f2f2ef;
   color: #73766e;
-  font-size: 7px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price {
@@ -339,11 +339,11 @@
 
 .variant-price del {
   color: #a7aaa2;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .variant-price strong {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 .booking-summary {
@@ -364,11 +364,11 @@
 
 .booking-summary span {
   color: #898d84;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .booking-summary strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .summary-price {
@@ -378,10 +378,10 @@
 .continue-button,
 .back-button {
   height: 43px;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   padding: 0 15px;
-  font-size: 9px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .continue-button {
@@ -406,7 +406,7 @@
   padding: 70px 0;
   color: #90938b;
   text-align: center;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .state.small {
@@ -434,15 +434,15 @@
 }
 
 .date-field span {
-  font-size: 9px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .date-field input {
   height: 45px;
   padding: 0 12px;
   border: 1px solid #dedfd9;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #fafaf8;
 }
 
@@ -451,18 +451,18 @@
   grid-template-columns: 1fr auto;
   gap: 8px;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #f2f2ef;
 }
 
 .selected-info-card span {
   color: #8b8e86;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .selected-info-card strong {
   text-align: right;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .slots-heading {
@@ -477,19 +477,19 @@
 }
 
 .slots-heading strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .slots-heading span {
   color: #93968e;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .refresh-button {
   width: 31px;
   height: 31px;
   border: 1px solid #e0e1dc;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #fff;
 }
 
@@ -507,17 +507,17 @@
   place-content: center;
   gap: 3px;
   border: 1px solid #e1e2dd;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #fff;
 }
 
 .slot-button strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .slot-button span {
   color: #999c94;
-  font-size: 7px;
+  font-size: var(--text-secondary);
 }
 
 .slot-button i {
@@ -535,7 +535,7 @@
   right: 7px;
   display: block;
   color: #fff;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .slots-empty {
@@ -545,7 +545,7 @@
   justify-items: center;
   padding: 30px;
   border: 1px dashed #dcded8;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #fafaf8;
   text-align: center;
 }
@@ -556,14 +556,14 @@
   display: grid;
   place-items: center;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #e9eae5;
 }
 
 .slots-empty p {
   max-width: 270px;
   color: #999c94;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .retry-button {
@@ -572,7 +572,7 @@
 
 .loader,
 .button-loader {
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   animation: spin 0.7s linear infinite;
 }
 
@@ -624,8 +624,8 @@
 }
 
 .form-field span {
-  font-size: 9px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .form-field input,
@@ -633,11 +633,11 @@
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #dedfd9;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #fafaf8;
   outline: none;
   font: inherit;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .form-field input {
@@ -659,7 +659,7 @@
   margin-bottom: 18px;
   padding: 16px 18px;
   border: 1px solid #e1e2dd;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #f8f8f5;
 }
 
@@ -671,20 +671,20 @@
 
 .account-info-label {
   color: #969991;
-  font-size: 9px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1.2px;
 }
 
 .account-info-bar strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .account-info-bar p {
   margin: 0;
   color: #858880;
-  font-size: 10px;
-  line-height: 1.55;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_55);
 }
 
 .edit-customer-button,
@@ -692,9 +692,9 @@
   flex: 0 0 auto;
   min-height: 38px;
   padding: 0 14px;
-  border-radius: 9px;
-  font-size: 9px;
-  font-weight: 700;
+  border-radius: var(--radius-9);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   cursor: pointer;
 }
 
@@ -722,7 +722,7 @@
   margin-top: 22px;
   padding: 16px;
   border: 1px solid #e4e5e0;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #f8f8f5;
 }
 
@@ -737,19 +737,19 @@
 }
 
 .coupon-heading strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-heading span {
   color: #969991;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .remove-coupon {
   border: 0;
   background: transparent;
   color: #9b5555;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-input-row {
@@ -763,22 +763,22 @@
   height: 41px;
   padding: 0 12px;
   border: 1px solid #dedfd9;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   text-transform: uppercase;
 }
 
 .coupon-input-row button {
   min-width: 90px;
   border: 0;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #181916;
   color: #fff;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-message {
   margin: 9px 0 0;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .coupon-message.success {
@@ -795,7 +795,7 @@
   overflow: hidden;
   align-self: start;
   border: 1px solid #e2e3de;
-  border-radius: 14px;
+  border-radius: var(--radius-14);
   background: #fafaf8;
 }
 
@@ -808,12 +808,12 @@
 
 :deep(.order-summary-heading span) {
   color: #9a9d95;
-  font-size: 7px;
+  font-size: var(--text-secondary);
   letter-spacing: 1.4px;
 }
 
 :deep(.order-summary-heading strong) {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 :deep(.appointment-summary),
@@ -837,13 +837,13 @@
 :deep(.appointment-summary span),
 :deep(.price-summary span) {
   color: #8d9088;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 :deep(.appointment-summary strong),
 :deep(.price-summary strong) {
   text-align: right;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 :deep(.discount-row strong) {
@@ -856,12 +856,12 @@
 }
 
 :deep(.total-row strong) {
-  font-size: 14px;
+  font-size: var(--text-main);
 }
 
 :deep(.deposit-row) {
   padding: 9px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #ededE8;
 }
 
@@ -869,8 +869,8 @@
   padding: 13px 17px;
   border-top: 1px solid #e5e6e1;
   color: #989b93;
-  font-size: 7px;
-  line-height: 1.55;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_55);
 }
 
 /* CONFIRMATION */
@@ -883,7 +883,7 @@
 .confirm-block {
   padding: 18px;
   border: 1px solid #e4e5e0;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
 }
 
 .confirm-block-title {
@@ -894,8 +894,8 @@
 
 .confirm-block-title span {
   color: #92958d;
-  font-size: 8px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1px;
 }
 
@@ -903,7 +903,7 @@
   border: 0;
   background: transparent;
   color: #555850;
-  font-size: 8px;
+  font-size: var(--text-secondary);
   text-decoration: underline;
 }
 
@@ -921,11 +921,11 @@
 .confirm-grid span,
 .confirm-note span {
   color: #969991;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .confirm-grid strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .confirm-note {
@@ -936,15 +936,15 @@
 
 .confirm-note p {
   margin: 5px 0 0;
-  font-size: 9px;
-  line-height: 1.6;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_6);
 }
 
 .final-notice {
   display: flex;
   gap: 11px;
   padding: 14px;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #f0f1ed;
 }
 
@@ -954,35 +954,35 @@
   height: 21px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #181916;
   color: #fff;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .final-notice p {
   margin: 2px 0 0;
   color: #72756d;
-  font-size: 8px;
-  line-height: 1.6;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_6);
 }
 
 .submit-error {
   padding: 14px;
   border: 1px solid #efd4d4;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #fff7f7;
 }
 
 .submit-error strong {
   color: #9b4848;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .submit-error p {
   margin: 5px 0 0;
   color: #a76666;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 /* SUCCESS */
@@ -993,7 +993,7 @@
   padding: 55px;
   box-sizing: border-box;
   border: 1px solid #e0e1dc;
-  border-radius: 24px;
+  border-radius: var(--radius-24);
   background: #fff;
   text-align: center;
 }
@@ -1004,22 +1004,22 @@
   display: grid;
   place-items: center;
   margin: 0 auto 20px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #181916;
   color: #fff;
-  font-size: 19px;
+  font-size: var(--heading-sm);
 }
 
 .success-label {
   color: #7f827a;
-  font-size: 8px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 1.7px;
 }
 
 .success-card h1 {
   margin: 12px 0;
-  font-size: 31px;
+  font-size: var(--heading-lg);
   letter-spacing: -1.4px;
 }
 
@@ -1027,8 +1027,8 @@
   max-width: 470px;
   margin: 0 auto;
   color: #858880;
-  font-size: 10px;
-  line-height: 1.7;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_7);
 }
 
 .booking-code-box {
@@ -1036,7 +1036,7 @@
   margin: 28px auto;
   padding: 17px;
   border: 1px dashed #bfc1ba;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #f5f5f2;
 }
 
@@ -1044,12 +1044,12 @@
   display: block;
   margin-bottom: 6px;
   color: #92958d;
-  font-size: 7px;
+  font-size: var(--text-secondary);
   letter-spacing: 1.3px;
 }
 
 .booking-code-box strong {
-  font-size: 21px;
+  font-size: var(--heading-md);
   letter-spacing: 1px;
 }
 
@@ -1059,7 +1059,7 @@
   gap: 1px;
   overflow: hidden;
   border: 1px solid #e5e6e1;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #e5e6e1;
   text-align: left;
 }
@@ -1074,11 +1074,11 @@
 .success-details span,
 .success-prices span {
   color: #92958d;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .success-details strong {
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .success-prices {
@@ -1086,7 +1086,7 @@
   gap: 10px;
   margin-top: 14px;
   padding: 17px;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #f5f5f2;
   text-align: left;
 }
@@ -1097,7 +1097,7 @@
 }
 
 .success-prices strong {
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .success-prices .success-total {
@@ -1107,7 +1107,7 @@
 }
 
 .success-total strong {
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .discount-text {
@@ -1116,7 +1116,7 @@
 
 .success-deposit {
   padding: 9px;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #e9eae5;
 }
 
@@ -1127,14 +1127,14 @@
   margin-top: 14px;
   padding: 14px;
   border: 1px solid #e4e5e0;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   text-align: left;
 }
 
 .status-dot {
   width: 9px;
   height: 9px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: #b68d3c;
 }
 
@@ -1144,12 +1144,12 @@
 }
 
 .success-status strong {
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .success-status span {
   color: #92958d;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .success-actions {
@@ -1167,9 +1167,9 @@
   justify-content: center;
   gap: 15px;
   padding: 0 16px;
-  border-radius: 9px;
-  font-size: 9px;
-  font-weight: 700;
+  border-radius: var(--radius-9);
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   text-decoration: none;
 }
 
@@ -1213,7 +1213,7 @@
 
 @media (max-width: 650px) {
   .booking-heading h1 {
-    font-size: 34px;
+    font-size: var(--heading-lg);
   }
 
   .booking-progress {

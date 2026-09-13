@@ -7,8 +7,8 @@
 .nav-section-title {
   padding: 8px 13px 3px;
   color: #666b77;
-  font-size: 9px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   text-transform: uppercase;
   letter-spacing: 1px;
 }

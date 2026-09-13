@@ -24,8 +24,8 @@
 .hero-label,
 .eyebrow {
   color: #8d9087;
-  font-size: 9px;
-  font-weight: 750;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-750);
   letter-spacing: 2px;
 }
 
@@ -33,22 +33,22 @@
   max-width: 650px;
   margin: 17px 0 23px;
   font-size: clamp(48px, 6vw, 82px);
-  line-height: 0.98;
+  line-height: var(--line-height-0_98);
   letter-spacing: -4px;
 }
 
 .hero-copy h1 span {
   display: block;
   color: #969990;
-  font-weight: 450;
+  font-weight: var(--font-weight-450);
 }
 
 .hero-copy > p {
   max-width: 510px;
   margin: 0;
   color: #74776f;
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: var(--text-main);
+  line-height: var(--line-height-1_8);
 }
 
 .hero-actions {
@@ -64,10 +64,10 @@
   align-items: center;
   gap: 18px;
   padding: 0 19px;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .hero-primary {
@@ -94,12 +94,12 @@
 
 .hero-trust strong {
   color: #aaaDA5;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .hero-trust span {
-  font-size: 10px;
-  font-weight: 600;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-600);
 }
 
 .hero-visual {
@@ -119,7 +119,7 @@
 .large-card {
   width: 390px;
   padding: 22px;
-  border-radius: 23px;
+  border-radius: var(--radius-23);
   transform: rotate(-2deg);
 }
 
@@ -127,22 +127,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .live-dot {
   padding: 5px 8px;
-  border-radius: 99px;
+  border-radius: var(--radius-pill-sm);
   background: #edf6ed;
   color: #537354;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .mini-calendar {
   margin-top: 24px;
   padding: 18px;
-  border-radius: 15px;
+  border-radius: var(--radius-15);
   background: #f6f6f3;
 }
 
@@ -150,7 +150,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 17px;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .calendar-heading span {
@@ -167,9 +167,9 @@
   height: 31px;
   display: grid;
   place-items: center;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   color: #92958e;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .calendar-days .selected {
@@ -189,9 +189,9 @@
   display: grid;
   place-items: center;
   border: 1px solid #e8e9e5;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   color: #696c65;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .time-slots .active {
@@ -208,7 +208,7 @@
   min-width: 195px;
   padding: 12px 14px;
   border: 1px solid #e4e5e0;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: rgba(255, 255, 255, 0.95);
   box-shadow:
     0 20px 50px rgba(30, 31, 28, 0.08);
@@ -229,10 +229,10 @@
   height: 29px;
   display: grid;
   place-items: center;
-  border-radius: 8px;
+  border-radius: var(--radius-8);
   background: #eaf4e9;
   color: #59745a;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .floating-icon.dark {
@@ -246,12 +246,12 @@
 }
 
 .floating-card strong {
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .floating-card span {
   color: #969990;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .services-section {
@@ -268,15 +268,15 @@
 
 .section-heading h2 {
   margin: 9px 0 0;
-  font-size: 34px;
+  font-size: var(--heading-lg);
   letter-spacing: -1.5px;
 }
 
 .view-all {
   color: #5f625b;
   text-decoration: none;
-  font-size: 10px;
-  font-weight: 600;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-600);
 }
 
 .service-grid {
@@ -289,7 +289,7 @@
 .service-card {
   overflow: hidden;
   border: 1px solid #e7e8e3;
-  border-radius: 18px;
+  border-radius: var(--radius-18);
   background: #fff;
 }
 
@@ -321,8 +321,8 @@
 
 .image-placeholder span {
   color: #a3a69d;
-  font-size: 60px;
-  font-weight: 800;
+  font-size: var(--heading-lg);
+  font-weight: var(--font-weight-800);
 }
 
 .category-badge {
@@ -330,11 +330,11 @@
   top: 15px;
   left: 15px;
   padding: 6px 9px;
-  border-radius: 99px;
+  border-radius: var(--radius-pill-sm);
   background: rgba(255, 255, 255, 0.9);
   color: #55584f;
-  font-size: 8px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .service-content {
@@ -343,15 +343,15 @@
 
 .service-content h3 {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--text-main);
 }
 
 .service-content p {
   min-height: 48px;
   margin: 7px 0 18px;
   color: #8d9088;
-  font-size: 10px;
-  line-height: 1.65;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_65);
 }
 
 .service-bottom {
@@ -367,11 +367,11 @@
 
 .service-bottom span {
   color: #999c94;
-  font-size: 8px;
+  font-size: var(--text-secondary);
 }
 
 .service-bottom strong {
-  font-size: 13px;
+  font-size: var(--text-main);
 }
 
 .service-arrow {
@@ -379,7 +379,7 @@
   height: 35px;
   display: grid;
   place-items: center;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #181916;
   color: #fff;
   text-decoration: none;
@@ -389,7 +389,7 @@
   padding: 80px 0;
   color: #92958e;
   text-align: center;
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .process-section {
@@ -410,16 +410,16 @@
 
 .process-copy h2 {
   margin: 15px 0 22px;
-  font-size: 40px;
-  line-height: 1.05;
+  font-size: var(--heading-lg);
+  line-height: var(--line-height-1_05);
   letter-spacing: -1.8px;
 }
 
 .process-copy p {
   max-width: 480px;
   color: #969990;
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: var(--text-secondary);
+  line-height: var(--line-height-1_8);
 }
 
 .process-steps {
@@ -436,7 +436,7 @@
 
 .process-steps article > span {
   color: #666961;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .process-steps div {
@@ -445,13 +445,13 @@
 }
 
 .process-steps strong {
-  font-size: 12px;
+  font-size: var(--text-secondary);
 }
 
 .process-steps p {
   margin: 0;
   color: #868981;
-  font-size: 9px;
+  font-size: var(--text-secondary);
 }
 
 .cta-section {
@@ -465,22 +465,22 @@
   display: grid;
   justify-items: center;
   padding: 70px 30px;
-  border-radius: 25px;
+  border-radius: var(--radius-25);
   background: #e8e9e3;
   text-align: center;
 }
 
 .cta-box > span {
   color: #898c84;
-  font-size: 9px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .cta-box h2 {
   margin: 12px 0 25px;
-  font-size: 38px;
+  font-size: var(--heading-lg);
   letter-spacing: -1.5px;
 }
 
@@ -519,7 +519,7 @@
   }
 
   .hero-copy h1 {
-    font-size: 49px;
+    font-size: var(--heading-lg);
     letter-spacing: -2.5px;
   }
 
@@ -550,10 +550,10 @@
   }
 
   .process-copy h2 {
-    font-size: 32px;
+    font-size: var(--heading-lg);
   }
 
   .cta-box h2 {
-    font-size: 31px;
+    font-size: var(--heading-lg);
   }
 }

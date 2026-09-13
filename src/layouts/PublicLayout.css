@@ -40,15 +40,15 @@
   height: 35px;
   display: grid;
   place-items: center;
-  border-radius: 10px;
+  border-radius: var(--radius-10);
   background: #181916;
   color: #fff;
-  font-size: 14px;
-  font-weight: 850;
+  font-size: var(--text-main);
+  font-weight: var(--font-weight-850);
 }
 
 .brand strong {
-  font-size: 16px;
+  font-size: var(--heading-sm);
   letter-spacing: -0.3px;
 }
 
@@ -63,8 +63,8 @@
   padding: 27px 0 24px;
   color: #696c65;
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 550;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-550);
 }
 
 .nav-link:hover,
@@ -92,8 +92,8 @@
 .login-link {
   color: #555850;
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 650;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-650);
 }
 
 .booking-link {
@@ -101,12 +101,12 @@
   display: inline-flex;
   align-items: center;
   padding: 0 17px;
-  border-radius: 11px;
+  border-radius: var(--radius-11);
   background: #181916;
   color: #fff;
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
 }
 
 .account-menu {
@@ -120,7 +120,7 @@
   gap: 8px;
   padding: 0 10px 0 6px;
   border: 1px solid #e0e1dc;
-  border-radius: 12px;
+  border-radius: var(--radius-12);
   background: #fff;
   color: #181916;
 }
@@ -130,25 +130,25 @@
   height: 30px;
   display: grid;
   place-items: center;
-  border-radius: 9px;
+  border-radius: var(--radius-9);
   background: #181916;
   color: #fff;
-  font-size: 10px;
-  font-weight: 800;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-800);
 }
 
 .account-name {
   max-width: 150px;
   overflow: hidden;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-700);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .chevron {
   color: #92958d;
-  font-size: 10px;
+  font-size: var(--text-secondary);
 }
 
 .account-dropdown {
@@ -158,7 +158,7 @@
   width: 235px;
   overflow: hidden;
   border: 1px solid #e0e1dc;
-  border-radius: 13px;
+  border-radius: var(--radius-13);
   background: #fff;
   box-shadow:
     0 18px 50px
@@ -173,13 +173,13 @@
 }
 
 .dropdown-user strong {
-  font-size: 11px;
+  font-size: var(--text-secondary);
 }
 
 .dropdown-user span {
   overflow: hidden;
   color: #969990;
-  font-size: 9px;
+  font-size: var(--text-secondary);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -196,7 +196,7 @@
   color: #4f524b;
   text-decoration: none;
   font: inherit;
-  font-size: 10px;
+  font-size: var(--text-secondary);
   text-align: left;
 }
 

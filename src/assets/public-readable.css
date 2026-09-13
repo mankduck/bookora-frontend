@@ -10,85 +10,85 @@
 
 /* Header */
 .public-shell .brand strong {
-  font-size: 18px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 .public-shell .nav-link,
 .public-shell .login-link,
 .public-shell .booking-link,
 .public-shell .account-name {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .public-shell .dropdown-user strong {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .public-shell .dropdown-user span,
 .public-shell .dropdown-link {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 /* Booking page */
 .booking-page .back-link {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page .eyebrow {
-  font-size: 12px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .booking-page .booking-heading h1 {
-  font-size: 42px !important;
-  line-height: 1.12 !important;
+  font-size: var(--heading-lg) !important;
+  line-height: var(--line-height-1_12) !important;
 }
 
 .booking-page .booking-heading p {
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  font-size: var(--text-main) !important;
+  line-height: var(--line-height-1_7) !important;
 }
 
 .booking-page .progress-item strong {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page .progress-item span {
-  font-size: 11px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .booking-page .section-title h2 {
-  font-size: 18px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 .booking-page .section-title p {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
+  font-size: var(--text-main) !important;
+  line-height: var(--line-height-1_5) !important;
 }
 
 .booking-page .service-option strong,
 .booking-page .option-content strong {
-  font-size: 15px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page .service-option span,
 .booking-page .option-content > span {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
+  font-size: var(--text-main) !important;
+  line-height: var(--line-height-1_5) !important;
 }
 
 .booking-page label,
 .booking-page .form-field label {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page input,
 .booking-page textarea,
 .booking-page select {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page button {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page .summary-card span,
@@ -96,133 +96,133 @@
 .booking-page .summary-note,
 .booking-page .confirm-grid span,
 .booking-page .confirm-note span {
-  font-size: 12px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .booking-page .summary-card strong,
 .booking-page .confirm-grid strong {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .booking-page .total-row strong {
-  font-size: 18px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 /* Account pages */
 .account-page .eyebrow {
-  font-size: 12px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .account-page .page-heading h1,
 .account-page .detail-heading h1 {
-  font-size: 36px !important;
-  line-height: 1.15 !important;
+  font-size: var(--heading-lg) !important;
+  line-height: var(--line-height-1_15) !important;
 }
 
 .account-page .page-heading p,
 .account-page .detail-heading p {
-  font-size: 14px !important;
-  line-height: 1.65 !important;
+  font-size: var(--text-main) !important;
+  line-height: var(--line-height-1_65) !important;
 }
 
 .account-page .primary-link,
 .account-page .back-link {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .tabs button {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .booking-code {
-  font-size: 11px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .account-page .booking-topline h3 {
-  font-size: 17px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 .account-page .booking-topline p {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .booking-meta {
-  font-size: 12px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .account-page .booking-meta strong {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .status-badge {
-  font-size: 11px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .account-page .state,
 .account-page .empty-card {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .empty-card p {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .detail-card h2 {
-  font-size: 17px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 .account-page .info-list span,
 .account-page .contact-grid span,
 .account-page .note-box span {
-  font-size: 12px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .account-page .info-list strong,
 .account-page .contact-grid strong {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .note-box p {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .profile-intro strong {
-  font-size: 16px !important;
+  font-size: var(--heading-sm) !important;
 }
 
 .account-page .profile-intro span {
-  font-size: 12px !important;
+  font-size: var(--text-secondary) !important;
 }
 
 .account-page .field span {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .field input {
-  font-size: 14px !important;
+  font-size: var(--text-main) !important;
 }
 
 .account-page .form-actions button,
 .account-page .message {
-  font-size: 13px !important;
+  font-size: var(--text-main) !important;
 }
 
 /* Home public - tăng các cỡ chữ quá nhỏ nếu component đang dùng kiểu 9-11px */
 .public-shell main p {
-  line-height: 1.65;
+  line-height: var(--line-height-1_65);
 }
 
 @media (max-width: 700px) {
   .booking-page .booking-heading h1,
   .account-page .page-heading h1,
   .account-page .detail-heading h1 {
-    font-size: 32px !important;
+    font-size: var(--heading-lg) !important;
   }
 
   .public-shell .nav-link,
   .public-shell .login-link,
   .public-shell .booking-link,
   .public-shell .account-name {
-    font-size: 13px !important;
+    font-size: var(--text-main) !important;
   }
 }
