@@ -110,9 +110,7 @@
           class="service-card"
         >
           <div class="service-main">
-            <div class="service-avatar">
-              {{ service.name.charAt(0).toUpperCase() }}
-            </div>
+            <div class="service-avatar"><img v-if="service.thumbnail" :src="service.thumbnail" :alt="service.name"/><span v-else>{{ service.name.charAt(0).toUpperCase() }}</span></div>
 
             <div class="service-info">
               <div class="service-title-row">
@@ -401,6 +399,8 @@
             </div>
           </div>
 
+          <div class="form-field image-upload-field"><label>Ảnh dịch vụ</label><div class="image-upload-row"><img v-if="serviceForm.thumbnail" :src="serviceForm.thumbnail" alt="Ảnh dịch vụ"/><input type="file" accept="image/jpeg,image/png,image/webp" @change="uploadServiceImage"/></div></div>
+
           <div class="form-field">
             <label>Mô tả ngắn</label>
 
@@ -581,6 +581,8 @@
               />
             </div>
           </div>
+
+          <div class="form-field image-upload-field"><label>Ảnh gói dịch vụ</label><div class="image-upload-row"><img v-if="variantForm.thumbnail" :src="variantForm.thumbnail" alt="Ảnh gói"/><input type="file" accept="image/jpeg,image/png,image/webp" @change="uploadVariantImage"/></div></div>
 
           <div class="form-field">
             <label>Mô tả</label>
@@ -770,6 +772,8 @@ const {
   closeVariantModal,
   saveVariant,
   removeVariant,
+  uploadServiceImage,
+  uploadVariantImage,
 } = useServicesView()
 </script>
 

@@ -4,6 +4,7 @@ import {
   ref,
 } from 'vue'
 import axios from 'axios'
+import { adminMediaApi } from '@/services/adminMedia.api'
 import staffApi, {
   type Staff,
 } from '@/services/staff.api'
@@ -47,6 +48,7 @@ export function useStaffView() {
     email: '',
     phone: '',
     password: '',
+    avatar: '',
     employee_code: '',
     position: '',
     bio: '',
@@ -132,6 +134,7 @@ export function useStaffView() {
     form.email = ''
     form.phone = ''
     form.password = ''
+    form.avatar = ''
     form.employee_code = ''
     form.position = ''
     form.bio = ''
@@ -168,6 +171,8 @@ export function useStaffView() {
   
     form.phone =
       staff.user.phone ?? ''
+
+    form.avatar = staff.user.avatar ?? ''
   
     form.employee_code =
       staff.employee_code ?? ''
@@ -232,6 +237,15 @@ export function useStaffView() {
     resetForm()
   }
 
+  const uploadStaffAvatar = async (event: Event) => {
+    const file=(event.target as HTMLInputElement).files?.[0]
+    if(!file)return
+    saving.value=true
+    try{form.avatar=await adminMediaApi.uploadImage(file)}
+    catch{formError.value='Không thể tải ảnh nhân viên.'}
+    finally{saving.value=false}
+  }
+
   const saveStaff = async () => {
     formError.value = ''
   
@@ -289,6 +303,9 @@ export function useStaffView() {
   
         password:
           form.password || undefined,
+
+        avatar:
+          form.avatar || null,
   
         employee_code:
           form.employee_code.trim() ||
@@ -427,6 +444,7 @@ export function useStaffView() {
     openEdit,
     closeModal,
     saveStaff,
+    uploadStaffAvatar,
     removeStaff,
   };
 }

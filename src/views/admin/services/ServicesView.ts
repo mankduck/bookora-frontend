@@ -4,6 +4,7 @@ import {
   ref,
 } from 'vue'
 import axios from 'axios'
+import { adminMediaApi } from '@/services/adminMedia.api'
 import serviceApi, {
   type Service,
   type ServiceVariant,
@@ -51,6 +52,7 @@ export function useServicesView() {
     slug: '',
     short_description: '',
     description: '',
+    thumbnail: '',
     base_price: 0,
     default_duration_minutes: 60,
     status: 'active' as 'active' | 'inactive',
@@ -62,6 +64,7 @@ export function useServicesView() {
     name: '',
     code: '',
     description: '',
+    thumbnail: '',
     price: 0,
     sale_price: null as number | null,
     duration_minutes: 60,
@@ -178,6 +181,7 @@ export function useServicesView() {
     serviceForm.slug = ''
     serviceForm.short_description = ''
     serviceForm.description = ''
+    serviceForm.thumbnail = ''
     serviceForm.base_price = 0
     serviceForm.default_duration_minutes = 60
     serviceForm.status = 'active'
@@ -215,6 +219,8 @@ export function useServicesView() {
   
     serviceForm.description =
       service.description ?? ''
+
+    serviceForm.thumbnail = service.thumbnail ?? ''
   
     serviceForm.base_price =
       Number(service.base_price)
@@ -238,6 +244,15 @@ export function useServicesView() {
     serviceModalOpen.value = false
     editingService.value = null
     resetServiceForm()
+  }
+
+  const uploadServiceImage = async (event: Event) => {
+    const file=(event.target as HTMLInputElement).files?.[0]
+    if(!file)return
+    saving.value=true
+    try{serviceForm.thumbnail=await adminMediaApi.uploadImage(file)}
+    catch{formError.value='Không thể tải ảnh dịch vụ.'}
+    finally{saving.value=false}
   }
 
   const saveService = async () => {
@@ -268,6 +283,9 @@ export function useServicesView() {
   
         description:
           serviceForm.description,
+
+        thumbnail:
+          serviceForm.thumbnail || null,
   
         base_price:
           Number(serviceForm.base_price),
@@ -342,6 +360,7 @@ export function useServicesView() {
     variantForm.name = ''
     variantForm.code = ''
     variantForm.description = ''
+    variantForm.thumbnail = ''
     variantForm.price = 0
     variantForm.sale_price = null
     variantForm.duration_minutes = 60
@@ -383,6 +402,8 @@ export function useServicesView() {
     variantForm.code = variant.code ?? ''
     variantForm.description =
       variant.description ?? ''
+
+    variantForm.thumbnail = variant.thumbnail ?? ''
   
     variantForm.price =
       Number(variant.price)
@@ -418,6 +439,15 @@ export function useServicesView() {
     resetVariantForm()
   }
 
+  const uploadVariantImage = async (event: Event) => {
+    const file=(event.target as HTMLInputElement).files?.[0]
+    if(!file)return
+    saving.value=true
+    try{variantForm.thumbnail=await adminMediaApi.uploadImage(file)}
+    catch{formError.value='Không thể tải ảnh gói dịch vụ.'}
+    finally{saving.value=false}
+  }
+
   const saveVariant = async () => {
     if (!selectedService.value) {
       return
@@ -443,6 +473,9 @@ export function useServicesView() {
   
         description:
           variantForm.description,
+
+        thumbnail:
+          variantForm.thumbnail || null,
   
         price:
           Number(variantForm.price),
@@ -579,11 +612,13 @@ export function useServicesView() {
     openEditService,
     closeServiceModal,
     saveService,
+    uploadServiceImage,
     removeService,
     openCreateVariant,
     openEditVariant,
     closeVariantModal,
     saveVariant,
+    uploadVariantImage,
     removeVariant,
   };
 }

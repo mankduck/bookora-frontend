@@ -444,6 +444,8 @@
                   selectVariant(variant)
                 "
               >
+                <div v-if="variant.thumbnail" class="variant-image"><img :src="variant.thumbnail" :alt="variant.name"/></div>
+
                 <div class="variant-header">
                   <div>
                     <strong>

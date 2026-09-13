@@ -530,6 +530,34 @@
             </div>
           </section>
 
+
+          <section class="detail-card full review-card">
+            <div class="review-heading">
+              <div>
+                <h2>Đánh giá nhân viên phụ trách</h2>
+                <p>{{ primaryStaffName }}</p>
+              </div>
+            </div>
+
+            <div v-if="booking.review" class="review-existing">
+              <strong>{{ '★'.repeat(Number(booking.review.rating)) }}{{ '☆'.repeat(5 - Number(booking.review.rating)) }}</strong>
+              <p>{{ booking.review.comment || 'Bạn đã đánh giá booking này.' }}</p>
+            </div>
+
+            <template v-else-if="booking.can_review">
+              <div class="rating-row">
+                <button v-for="n in 5" :key="n" type="button" :class="{ active: n <= reviewRating }" @click="reviewRating = n">★</button>
+              </div>
+              <textarea v-model.trim="reviewComment" rows="4" maxlength="3000" placeholder="Chia sẻ trải nghiệm của bạn với nhân viên phụ trách..." />
+              <div class="review-actions">
+                <span v-if="reviewMessage">{{ reviewMessage }}</span>
+                <button type="button" class="primary-button" :disabled="reviewSaving" @click="submitReview">{{ reviewSaving ? 'Đang gửi...' : 'Gửi đánh giá' }}</button>
+              </div>
+            </template>
+
+            <p v-else class="review-locked">Bạn có thể đánh giá Photo sau khi lịch đặt đã hoàn thành.</p>
+          </section>
+
           <section class="detail-card full">
             <h2>Thông tin liên hệ</h2>
 
@@ -587,7 +615,13 @@ const {
   uploading,
   deleting,
   proofMessage,
+  proofMessageType,
+  previewUrl,
   proofNote,
+  reviewRating,
+  reviewComment,
+  reviewSaving,
+  reviewMessage,
   selectedFile,
   fileInput,
   paymentSummary,
@@ -600,6 +634,7 @@ const {
   handleFileChange,
   uploadProof,
   deleteProof,
+  submitReview,
   formatDate,
   formatTime,
   formatMoney,

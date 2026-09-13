@@ -1,4 +1,4 @@
-import { computed, onMounted, reactive, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, reactive, ref } from "vue";
 import axios from "axios";
 import { useRoute } from "vue-router";
 import adminBookingApi, {
@@ -704,12 +704,36 @@ export function useBookingsView() {
     await loadBookings();
   };
 
+  const handleRealtimeNotification = async (event: Event) => {
+    const notification = (event as CustomEvent).detail as { type?: string; booking_id?: number | null } | undefined;
+    if (!notification) return;
+
+    const adminRelevant = [
+      'booking_created',
+      'payment_proof_uploaded',
+      'staff_review_received',
+    ];
+
+    if (!adminRelevant.includes(String(notification.type || ''))) return;
+
+    await loadBookings();
+
+    if (selectedBooking.value && Number(notification.booking_id) === Number(selectedBooking.value.id)) {
+      await refreshSelected();
+    }
+  };
+
   onMounted(async () => {
+    window.addEventListener('bookora:notification', handleRealtimeNotification);
     await loadBookings();
     const bookingId = Number(route.query.booking || 0);
     if (bookingId > 0) {
       await openBooking(bookingId);
     }
+  });
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('bookora:notification', handleRealtimeNotification);
   });
 
   return {

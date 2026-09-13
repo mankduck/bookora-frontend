@@ -112,13 +112,7 @@
           class="staff-card"
         >
           <div class="staff-top">
-            <div class="avatar-large">
-              {{
-                staff.user.name
-                  .charAt(0)
-                  .toUpperCase()
-              }}
-            </div>
+            <div class="avatar-large"><img v-if="staff.user.avatar" :src="staff.user.avatar" :alt="staff.user.name"/><span v-else>{{ staff.user.name.charAt(0).toUpperCase() }}</span></div>
 
             <div class="staff-basic">
               <div class="staff-name-row">
@@ -284,6 +278,8 @@
                 />
               </div>
             </div>
+
+            <div class="form-field image-upload-field"><label>Ảnh đại diện</label><div class="image-upload-row"><img v-if="form.avatar" :src="form.avatar" alt="Ảnh nhân viên"/><input type="file" accept="image/jpeg,image/png,image/webp" @change="uploadStaffAvatar"/></div></div>
 
             <div class="form-grid">
               <div class="form-field">
@@ -548,6 +544,7 @@ const {
   closeModal,
   saveStaff,
   removeStaff,
+  uploadStaffAvatar,
 } = useStaffView()
 </script>
 

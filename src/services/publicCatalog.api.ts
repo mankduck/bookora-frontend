@@ -17,6 +17,7 @@ export interface PublicServiceVariant {
   name: string
   code: string | null
   description: string | null
+  thumbnail: string | null
   price: string | number
   sale_price: string | number | null
   duration_minutes: number

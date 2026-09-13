@@ -37,6 +37,11 @@ export function useAccountBookingDetailView() {
 
   const proofNote = ref('')
 
+  const reviewRating = ref(5)
+  const reviewComment = ref('')
+  const reviewSaving = ref(false)
+  const reviewMessage = ref('')
+
   const selectedFile =
     ref<File | null>(null)
 
@@ -284,12 +289,19 @@ export function useAccountBookingDetailView() {
     proofMessageType.value = ''
   
     try {
+      const bookingId = booking.value.id
+      const proofId = latestProof.value.id
+
       booking.value =
         await customerBookingApi
           .deletePaymentProof(
-            booking.value.id,
-            latestProof.value.id,
+            bookingId,
+            proofId,
           )
+
+      // Refetch once after delete so the proof list/payment summary always reflects server state.
+      // This also prevents the old proof card from remaining visible after a successful delete.
+      await loadBooking()
   
       proofMessage.value =
         'Đã xoá ảnh chuyển khoản.'
@@ -304,6 +316,36 @@ export function useAccountBookingDetailView() {
     } finally {
       deleting.value = false
     }
+  }
+
+
+  const submitReview = async () => {
+    if (!booking.value || !booking.value.can_review || reviewSaving.value) return
+    reviewSaving.value = true
+    reviewMessage.value = ''
+    try {
+      await customerBookingApi.submitReview(booking.value.id, {
+        rating: reviewRating.value,
+        comment: reviewComment.value.trim() || undefined,
+      })
+      reviewMessage.value = 'Cảm ơn bạn đã gửi đánh giá.'
+      await loadBooking()
+      if (booking.value?.review) {
+        reviewRating.value = Number(booking.value.review.rating)
+        reviewComment.value = booking.value.review.comment || ''
+      }
+    } catch (error) {
+      reviewMessage.value = getErrorMessage(error, 'Không thể gửi đánh giá.')
+    } finally {
+      reviewSaving.value = false
+    }
+  }
+
+  const handleRealtimeNotification = (event: Event) => {
+    const notification = (event as CustomEvent).detail as { booking_id?: number | null } | undefined
+    if (!notification?.booking_id || !booking.value) return
+    if (Number(notification.booking_id) !== Number(booking.value.id)) return
+    void loadBooking()
   }
 
   const getErrorMessage = (
@@ -413,8 +455,14 @@ export function useAccountBookingDetailView() {
     return labels[value] || value
   }
 
-  onMounted(loadBooking)
-  onBeforeUnmount(clearPreview)
+  onMounted(() => {
+    loadBooking()
+    window.addEventListener('bookora:notification', handleRealtimeNotification)
+  })
+  onBeforeUnmount(() => {
+    clearPreview()
+    window.removeEventListener('bookora:notification', handleRealtimeNotification)
+  })
 
   return {
     ref,
@@ -428,6 +476,10 @@ export function useAccountBookingDetailView() {
     proofMessageType,
     previewUrl,
     proofNote,
+    reviewRating,
+    reviewComment,
+    reviewSaving,
+    reviewMessage,
     selectedFile,
     fileInput,
     paymentSummary,
@@ -440,6 +492,7 @@ export function useAccountBookingDetailView() {
     handleFileChange,
     uploadProof,
     deleteProof,
+    submitReview,
     formatDate,
     formatTime,
     formatMoney,

@@ -1,0 +1,31 @@
+.reviews-page{display:grid;gap:18px}.module-page-header h2{margin:6px 0;font-size:var(--heading-lg)}.module-page-header p{margin:0;color:#858a81;font-size:var(--text-secondary)}.review-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.review-stats article{display:grid;gap:7px;padding:16px;border:1px solid #e0e1dc;border-radius:12px;background:#fff}.review-stats span{color:#8b8f86;font-size:var(--text-secondary)}.review-stats strong{font-size:var(--heading-sm)}.review-grid{display:grid;grid-template-columns:1.6fr .8fr;gap:12px}.review-panel{padding:18px;border:1px solid #e0e1dc;border-radius:13px;background:#fff}.panel-head{display:flex;justify-content:space-between;gap:15px;margin-bottom:14px}.panel-head h3{margin:0;font-size:var(--heading-sm)}.panel-head p{margin:4px 0 0;color:#8b8f86;font-size:var(--text-secondary)}.review-filters{display:flex;gap:7px}.review-filters input,.review-filters select{min-height:36px;border:1px solid #dedfd9;border-radius:8px;padding:0 9px;font-size:var(--text-main)}.review-list,.staff-ranking{display:grid}.review-list article,.staff-ranking article{padding:13px 0;border-top:1px solid #ecece8}.review-top{display:flex;justify-content:space-between;gap:12px}.review-top>div{display:grid;gap:3px}.review-top span,.staff-ranking span{color:#8b8f86;font-size:var(--text-secondary)}.review-top b{color:#9a7d2f;letter-spacing:1px}.review-list p{margin:9px 0 0;font-size:var(--text-main);line-height:1.6}.staff-ranking article{display:flex;align-items:center;gap:10px}.rank{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#181916;color:#fff!important}.staff-ranking article>div{display:grid;gap:3px}@media(max-width:900px){.review-stats{grid-template-columns:repeat(2,1fr)}.review-grid{grid-template-columns:1fr}}@media(max-width:600px){.review-stats{grid-template-columns:1fr}.panel-head{display:grid}.review-filters{display:grid}}
+
+.review-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.review-filters input {
+  min-width: 210px;
+}
+
+.review-filters select {
+  min-width: 150px;
+}
+
+.review-reset {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid #dedfd9;
+  border-radius: 9px;
+  background: #fff;
+  color: #555950;
+  font-size: var(--text-main);
+  cursor: pointer;
+}
+
+.review-reset:hover {
+  background: #f5f5f2;
+}

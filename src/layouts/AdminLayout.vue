@@ -5,8 +5,8 @@
         <div class="sidebar-logo">B</div>
 
         <div>
-          <strong>Bookora</strong>
-          <span>Administration</span>
+          <strong>{{ siteName }}</strong>
+          <span>{{ english ? "Administration" : "Quản trị" }}</span>
         </div>
       </div>
 
@@ -22,7 +22,7 @@
         </RouterLink>
 
         <div class="nav-section">
-          <span class="nav-section-title"> Booking </span>
+          <span class="nav-section-title"> {{ english ? "Booking" : "Booking" }} </span>
 
           <RouterLink
             to="/admin/bookings"
@@ -31,12 +31,12 @@
           >
             <span class="nav-icon"> ◇ </span>
 
-            <span>Lịch đặt</span>
+            <span>{{ english ? "Bookings" : "Lịch đặt" }}</span>
           </RouterLink>
         </div>
 
         <div class="nav-section">
-          <span class="nav-section-title"> Dịch vụ </span>
+          <span class="nav-section-title"> {{ english ? "Services" : "Dịch vụ" }} </span>
 
           <RouterLink
             to="/admin/service-categories"
@@ -45,7 +45,7 @@
           >
             <span class="nav-icon"> ▦ </span>
 
-            <span>Danh mục</span>
+            <span>{{ english ? "Categories" : "Danh mục" }}</span>
           </RouterLink>
 
           <RouterLink
@@ -55,12 +55,12 @@
           >
             <span class="nav-icon"> ◆ </span>
 
-            <span> Dịch vụ & Gói </span>
+            <span>{{ english ? "Services & Packages" : "Dịch vụ & Gói" }}</span>
           </RouterLink>
         </div>
 
         <div class="nav-section">
-          <span class="nav-section-title"> Khách hàng </span>
+          <span class="nav-section-title"> {{ english ? "Customers" : "Khách hàng" }} </span>
 
           <RouterLink
             to="/admin/customers"
@@ -69,7 +69,7 @@
           >
             <span class="nav-icon"> ♙ </span>
 
-            <span>Khách hàng</span>
+            <span>{{ english ? "Customers" : "Khách hàng" }}</span>
           </RouterLink>
         </div>
 
@@ -83,17 +83,30 @@
           >
             <span class="nav-icon"> ％ </span>
 
-            <span>Mã giảm giá</span>
+            <span>{{ english ? "Coupons" : "Mã giảm giá" }}</span>
           </RouterLink>
         </div>
 
+
         <div class="nav-section">
-          <span class="nav-section-title"> Nhân sự </span>
+          <span class="nav-section-title"> {{ english ? "Content" : "Nội dung" }} </span>
+          <RouterLink to="/admin/posts" class="nav-item" active-class="active"><span class="nav-icon"> ▤ </span><span>{{ english ? "Posts" : "Bài viết" }}</span></RouterLink>
+          <RouterLink to="/admin/reviews" class="nav-item" active-class="active"><span class="nav-icon"> ★ </span><span>{{ english ? "Photo Reviews" : "Đánh giá Photo" }}</span></RouterLink>
+        </div>
+
+        <div class="nav-section">
+          <span class="nav-section-title"> {{ english ? "Appearance" : "Giao diện" }} </span>
+          <RouterLink to="/admin/homepage" class="nav-item" active-class="active"><span class="nav-icon"> ☷ </span><span>{{ english ? "Homepage Layout" : "Bố cục trang chủ" }}</span></RouterLink>
+          <RouterLink to="/admin/settings" class="nav-item" active-class="active"><span class="nav-icon"> ⚙ </span><span>{{ english ? "Settings" : "Cài đặt" }}</span></RouterLink>
+        </div>
+
+        <div class="nav-section">
+          <span class="nav-section-title"> {{ english ? "Staff" : "Nhân sự" }} </span>
 
           <RouterLink to="/admin/staff" class="nav-item" active-class="active">
             <span class="nav-icon"> ♧ </span>
 
-            <span>Nhân viên</span>
+            <span>{{ english ? "Staff" : "Nhân viên" }}</span>
           </RouterLink>
         </div>
       </nav>
@@ -106,7 +119,7 @@
             {{ pageTitle }}
           </h1>
 
-          <p>Quản lý hệ thống Bookora</p>
+          <p>{{ english ? `Manage ${siteName}` : `Quản lý hệ thống ${siteName}` }}</p>
         </div>
 
         <div class="topbar-actions">
@@ -139,7 +152,7 @@
 import { useAdminLayout } from "./AdminLayout.ts";
 import NotificationBell from "@/components/notifications/NotificationBell.vue";
 
-const { RouterLink, RouterView, auth, userInitial, pageTitle } =
+const { RouterLink, RouterView, auth, site, english, siteName, userInitial, pageTitle } =
   useAdminLayout();
 </script>
 

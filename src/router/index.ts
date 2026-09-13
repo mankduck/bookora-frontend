@@ -26,6 +26,12 @@ import StaffView from "@/views/admin/staff/StaffView.vue";
 import BookingsView from "@/views/admin/bookings/BookingsView.vue";
 import CustomersView from "@/views/admin/customers/CustomersView.vue";
 import CouponsView from "@/views/admin/coupons/CouponsView.vue";
+import SettingsView from "@/views/admin/settings/SettingsView.vue";
+import PostsView from "@/views/admin/posts/PostsView.vue";
+import ReviewsView from "@/views/admin/reviews/ReviewsView.vue";
+import HomepageModulesView from "@/views/admin/homepage/HomepageModulesView.vue";
+import PostsListView from "@/views/public/posts/PostsListView.vue";
+import PostDetailView from "@/views/public/posts/PostDetailView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -40,6 +46,9 @@ const router = createRouter({
           name: "home",
           component: HomeView,
         },
+
+        { path: "bai-viet", name: "public-posts", component: PostsListView },
+        { path: "bai-viet/:slug", name: "public-post-detail", component: PostDetailView },
 
         {
           path: "booking",
@@ -156,6 +165,12 @@ const router = createRouter({
           name: "admin-bookings",
           component: BookingsView,
         },
+
+        { path: "posts", name: "admin-posts", component: PostsView },
+        { path: "reviews", name: "admin-reviews", component: ReviewsView },
+        { path: "settings", name: "admin-settings", component: SettingsView },
+        { path: "homepage", name: "admin-homepage", component: HomepageModulesView },
+
       ],
     },
   ],

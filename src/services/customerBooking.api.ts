@@ -109,6 +109,8 @@ export interface CustomerBooking {
   payment_summary?: PaymentSummary;
   payment_proofs?: PaymentProof[];
   bank_transfer?: BankTransfer;
+  can_review?: boolean;
+  review?: { id:number; rating:number; comment:string|null; staff_id:number } | null;
   coupon?: {
     id: number;
     code: string;
@@ -174,6 +176,11 @@ const customerBookingApi = {
     );
 
     return response.data.data.booking as CustomerBooking;
+  },
+
+  async submitReview(bookingId: number, payload: { rating: number; comment?: string }) {
+    const response = await api.post(`/api/v1/customer/bookings/${bookingId}/review`, payload);
+    return response.data.data.review;
   },
 
   async deletePaymentProof(bookingId: number, proofId: number) {

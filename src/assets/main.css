@@ -953,4 +953,18 @@ body {
   .admin-content {
     padding: 20px;
   }
+}.dashboard-bookings { display:grid; border-top:1px solid #ecece8; }
+.dashboard-booking-row { display:flex; align-items:center; justify-content:space-between; gap:16px; width:100%; padding:14px 0; border:0; border-bottom:1px solid #ecece8; background:transparent; text-align:left; cursor:pointer; }
+.dashboard-booking-row:hover { background:#fafaf8; }
+.dashboard-booking-row > div { display:grid; gap:4px; }
+.dashboard-booking-row span { color:#8c9087; font-size:var(--text-secondary); }
+.dashboard-booking-meta { text-align:right; justify-items:end; }
+.dashboard-status { width:max-content; padding:5px 8px; border-radius:999px; background:#f1f1ed; color:#666b62!important; }
+:root{--brand-primary:#181916;--brand-secondary:#f4f4f1}.primary-button,.booking-link,.hero-primary{background:var(--brand-primary)!important;border-color:var(--brand-primary)!important}.brand-mark,.account-avatar{background:var(--brand-primary)!important}
+
+/* Global mutation lock: prevents accidental double submit/click/scroll while data is changing. */
+html.request-locked,
+body.request-locked {
+  overflow: hidden !important;
+  overscroll-behavior: none;
 }

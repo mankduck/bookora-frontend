@@ -45,9 +45,11 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useNotificationStore } from '@/stores/notification'
+import { useAuthStore } from '@/stores/auth'
 import type { AppNotification } from '@/services/notification.api'
 
 const store = useNotificationStore()
+const auth = useAuthStore()
 const router = useRouter()
 const open = ref(false)
 
@@ -72,7 +74,7 @@ const formatTime = (value: string) => {
 
 onMounted(() => {
   document.addEventListener('click', close)
-  store.start()
+  store.start(auth.user?.id)
 })
 
 onBeforeUnmount(() => {

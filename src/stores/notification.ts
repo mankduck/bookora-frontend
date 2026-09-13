@@ -1,9 +1,10 @@
 import { defineStore } from 'pinia'
 import notificationApi, { type AppNotification } from '@/services/notification.api'
+import { realtimeNotifications } from '@/services/realtime'
+import { useSiteStore } from '@/stores/site'
 
 export type ToastItem = AppNotification & { toastId: number }
 
-let pollTimer: number | null = null
 let toastSequence = 0
 
 export const useNotificationStore = defineStore('notification', {
@@ -13,6 +14,7 @@ export const useNotificationStore = defineStore('notification', {
     unreadCount: 0,
     initialized: false,
     loading: false,
+    connectedUserId: null as number | null,
   }),
 
   getters: {
@@ -25,7 +27,9 @@ export const useNotificationStore = defineStore('notification', {
       this.loading = true
       try {
         const data = await notificationApi.list()
-        this.items = data.notifications
+        const merged = [...data.notifications, ...this.items]
+        const byId = new Map(merged.map((item) => [item.id, item]))
+        this.items = [...byId.values()].sort((a, b) => b.id - a.id).slice(0, 50)
         this.unreadCount = data.unread_count
         this.initialized = true
       } finally {
@@ -33,41 +37,40 @@ export const useNotificationStore = defineStore('notification', {
       }
     },
 
-    async poll() {
-      if (!this.initialized) {
-        await this.loadInitial()
-        return
+    receive(notification: AppNotification) {
+      if (this.items.some((item) => item.id === notification.id)) return
+
+      this.items = [notification, ...this.items].slice(0, 50)
+      if (!notification.read_at) this.unreadCount += 1
+      this.pushToast(notification)
+
+      if (notification.type === 'site_updated') {
+        useSiteStore().load(true)
       }
 
-      try {
-        const data = await notificationApi.list(this.latestId)
-        if (data.notifications.length) {
-          const incoming = [...data.notifications].sort((a, b) => a.id - b.id)
-          this.items = [...incoming.reverse(), ...this.items]
-          for (const notification of incoming.reverse()) {
-            this.pushToast(notification)
-          }
-        }
-        this.unreadCount = data.unread_count
-      } catch {
-        // Session hết hạn hoặc mạng tạm ngắt: lần poll sau sẽ thử lại.
-      }
+      window.dispatchEvent(new CustomEvent('bookora:notification', {
+        detail: notification,
+      }))
     },
 
-    async start() {
+    async start(userId?: number | null) {
+      if (!userId) return
+
+      if (this.connectedUserId !== userId) {
+        realtimeNotifications.connect(userId, (notification) => {
+          this.receive(notification)
+        })
+        this.connectedUserId = userId
+      }
+
       if (!this.initialized) {
         await this.loadInitial()
-      }
-      if (pollTimer === null) {
-        pollTimer = window.setInterval(() => this.poll(), 3000)
       }
     },
 
     stop() {
-      if (pollTimer !== null) {
-        window.clearInterval(pollTimer)
-        pollTimer = null
-      }
+      realtimeNotifications.disconnect()
+      this.connectedUserId = null
     },
 
     pushToast(notification: AppNotification) {
