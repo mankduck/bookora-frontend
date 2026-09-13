@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import api from '@/services/api'
+import { useNotificationStore } from '@/stores/notification'
 
 type Role = {
   id: number
@@ -80,6 +81,7 @@ export const useAuthStore = defineStore('auth', {
         await api.post('/api/v1/auth/logout')
       } finally {
         this.user = null
+        useNotificationStore().reset()
       }
     },
   },

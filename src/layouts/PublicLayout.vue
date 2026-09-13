@@ -44,6 +44,8 @@
 
         <div class="header-actions">
           <template v-if="auth.user">
+            <NotificationBell />
+
             <div
               class="account-menu"
               @click.stop
@@ -140,6 +142,7 @@
 
 <script setup lang="ts">
 import { usePublicLayout } from './PublicLayout.ts'
+import NotificationBell from '@/components/notifications/NotificationBell.vue'
 
 const {
   ref,

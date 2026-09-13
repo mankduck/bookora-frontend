@@ -110,6 +110,8 @@
         </div>
 
         <div class="topbar-actions">
+          <NotificationBell />
+
           <div class="topbar-profile">
             <div class="avatar small">
               {{ userInitial }}
@@ -135,6 +137,7 @@
 
 <script setup lang="ts">
 import { useAdminLayout } from "./AdminLayout.ts";
+import NotificationBell from "@/components/notifications/NotificationBell.vue";
 
 const { RouterLink, RouterView, auth, userInitial, pageTitle } =
   useAdminLayout();

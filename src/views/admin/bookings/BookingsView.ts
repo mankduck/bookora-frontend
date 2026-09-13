@@ -1,5 +1,6 @@
 import { computed, onMounted, reactive, ref } from "vue";
 import axios from "axios";
+import { useRoute } from "vue-router";
 import adminBookingApi, {
   type AdminBooking,
   type EligibleStaff,
@@ -8,6 +9,7 @@ import adminBookingApi, {
 import AdminCreateBookingModal from "@/views/admin/bookings/AdminCreateBookingModal.vue";
 
 export function useBookingsView() {
+  const route = useRoute();
   const loading = ref(false);
 
   const loadingDetail = ref(false);
@@ -702,7 +704,13 @@ export function useBookingsView() {
     await loadBookings();
   };
 
-  onMounted(loadBookings);
+  onMounted(async () => {
+    await loadBookings();
+    const bookingId = Number(route.query.booking || 0);
+    if (bookingId > 0) {
+      await openBooking(bookingId);
+    }
+  });
 
   return {
     ref,

@@ -1,5 +1,6 @@
 import './assets/main.css'
 import './assets/public-readable.css'
+import './components/notifications/notifications.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
